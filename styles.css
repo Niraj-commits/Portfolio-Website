@@ -39,55 +39,29 @@ section {
     padding: 15px;
 }
 .about-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 40px;
-    flex-wrap: wrap; 
-}
-
-.about-text {
-    color: #fff;
-    max-width: 60%;
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers content */
+    padding: 20px; /* Adds some padding around the content */
 }
 
 .about-image {
-    width: 200px; /* Fixed width */
-    height: 200px; /* Fixed height */
-    overflow: hidden;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 0.6; /* Image takes up 1 part of the available space */
+    margin-right: 20px; 
+    padding-left: 10px;
 }
 
 .propic {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover; 
+        border-radius: 50%; /* Makes the image circular */
+        width: 200px; /* Set a fixed width */
+        height: 200px; /* Set a fixed height */
+        object-fit: cover;
 }
 
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .about-image {
-        width: 150px; /* Slightly smaller image */
-        height: 150px;
-        /* Remove flex: 1; this is the fix */
-    }
-
-    .about-text {
-        max-width: 90%;
-    }
+.about-text {
+    flex: 2;
+    text-align: left;
 }
+
 
 .projects-container {
     display: flex;
