@@ -16,6 +16,8 @@
       </nav>
     </header>
 
+    <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+
     <section id="about" class="py-16 bg-gray-900">
       <div
         class="container mx-auto px-6 flex flex-col md:flex-row items-center"
@@ -57,6 +59,55 @@
       <hr class="border-t-2 border-gray-700" />
     </div>
 
+
+     <!-- Skills Section  -->
+
+     <section id="skills" class="py-10">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-semibold mb-6">Skills</h2>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/html.png" alt="HTML Logo" class="w-8 h-8" /> HTML
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/css.png" alt="CSS Logo" class="w-8 h-8" /> CSS
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/js.png" alt="JavaScript Logo" class="w-8 h-8" />
+            JavaScript
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/figma.png" alt="Figma" class="w-8 h-8" /> Figma
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/postgresql.svg" alt="PostgreSQL" class="w-8 h-8" />
+            PostgreSQL
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/postman.svg" alt="Postman" class="w-8 h-8" />
+            Postman
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/mysql.png" alt="mysql" class="w-8 h-8" /> MySQL
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/django.png" alt="django" class="w-8 h-8" /> Django
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/react.png" alt="react" class="w-8 h-8" /> React
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/python.svg" alt="python" class="w-8 h-8" /> Python
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="hr-container my-6">
+      <hr class="border-t-2 border-gray-700" />
+    </div>
+
+    <!-- Projects Section  -->
     <section id="projects" class="py-10">
       <div class="container mx-auto px-6">
         <h2 class="text-2xl font-semibold mb-6">Projects</h2>
@@ -222,50 +273,7 @@
       <hr class="border-t-2 border-gray-700" />
     </div>
 
-    <section id="skills" class="py-10">
-      <div class="container mx-auto px-6">
-        <h2 class="text-2xl font-semibold mb-6">Skills</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/html.png" alt="HTML Logo" class="w-8 h-8" /> HTML
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/css.png" alt="CSS Logo" class="w-8 h-8" /> CSS
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/js.png" alt="JavaScript Logo" class="w-8 h-8" />
-            JavaScript
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/figma.png" alt="Figma" class="w-8 h-8" /> Figma
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/postgresql.svg" alt="PostgreSQL" class="w-8 h-8" />
-            PostgreSQL
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/postman.svg" alt="Postman" class="w-8 h-8" />
-            Postman
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/mysql.png" alt="mysql" class="w-8 h-8" /> MySQL
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/django.png" alt="django" class="w-8 h-8" /> Django
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/react.png" alt="react" class="w-8 h-8" /> React
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/python.svg" alt="python" class="w-8 h-8" /> Python
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <div class="hr-container my-6">
-      <hr class="border-t-2 border-gray-700" />
-    </div>
+   
     <section id="experience" class="py-16 bg-gray-800 text-white">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-blue-400 mb-6">Experience</h2>
@@ -274,7 +282,7 @@
         >
           <div class="flex items-center mb-4">
             <div
-              class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
+              class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -307,6 +315,9 @@
       </div>
     </section>
 
+
+    <!-- Education Section  -->
+
     <section id="education" class="py-16 bg-gray-800 text-white">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-blue-400 mb-8">Education</h2>
@@ -317,12 +328,12 @@
         >
           <div class="flex items-center mb-4">
             <div
-              class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
+              class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                min-width="24"
+                min-height="24"
                 fill="currentColor"
                 class="bi bi-mortarboard"
                 viewBox="0 0 16 16"
@@ -350,7 +361,7 @@
         >
           <div class="flex items-center mb-4">
             <div
-              class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
+              class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -377,7 +388,7 @@
         >
           <div class="flex items-center mb-4">
             <div
-              class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
+              class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -405,13 +416,16 @@
       </div>
     </section>
 
+
+    <!-- Certificate Section -->
+
     <!-- <section id="certification" class="py-16 bg-gray-800 text-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-blue-400 mb-8">Certification</h2>
     
             <div class="certification-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
+                    <div class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
                             <path d="M9 12.416V8.5h2V6H7v2.5h2v3.916c-.795-.253-1.692-.416-2.5-.416s-1.705.163-2.5.416V6.5h2V4H6v4.5h2v3.916c-.795-.253-1.692-.416-2.5-.416s-1.705.163-2.5.416V9h2v2.5h-2v2H4v1h2.5v.5h5v-.5H12v-2h-2v-.5h-2v-.5h5V7.5h1V6.5H9V4z"/>
                         </svg>
@@ -424,7 +438,7 @@
     
             <div class="certification-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
+                    <div class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
                             <path d="M9 12.416V8.5h2V6H7v2.5h2v3.916c-.795-.253-1.692-.416-2.5-.416s-1.705.163-2.5.416V6.5h2V4H6v4.5h2v3.916c-.795-.253-1.692-.416-2.5-.416s-1.705.163-2.5.416V9h2v2.5h-2v2H4v1h2.5v.5h5v-.5H12v-2h-2v-.5h-2v-.5h5V7.5h1V6.5H9V4z"/>
                         </svg>
@@ -440,6 +454,8 @@
             <hr class="border-t-2 border-gray-700">
         </div>
     </section> -->
+
+ <!-- Contact Section  -->
 
     <section id="contact" class="py-10 bg-gray-900">
       <div class="container mx-auto px-6">
@@ -536,7 +552,10 @@
         </div>
       </div>
     </section>
+    
+  </div>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-center py-6">
       <p>&copy; 2025 Niraj Karki. All rights reserved.</p>
     </footer>
