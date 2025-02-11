@@ -20,3 +20,4 @@ document.getElementById("viewMoreBtn").addEventListener("click", function() {
         this.style.display = "none";  // Hide the button after the projects are revealed
     }, 500);
 });
+

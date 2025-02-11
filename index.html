@@ -1,237 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-white">
-
+  </head>
+  <body class="bg-gray-900 text-white">
     <header class="py-4 bg-gray-800 shadow-md">
-        <nav class="container mx-auto px-6">
-            <h1 class="text-3xl font-semibold text-center text-white">Niraj Karki</h1>
-        </nav>
+      <nav class="container mx-auto px-6">
+        <h1 class="text-3xl font-semibold text-center text-white">
+          Niraj Karki
+        </h1>
+      </nav>
     </header>
 
     <section id="about" class="py-16 bg-gray-900">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <!-- Profile Image Section -->
-            <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                <img src="images/me.jpg" alt="Photo" class="propic rounded-full w-64 h-64 object-cover shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105">
-            </div>
-    
-            <!-- Text Section -->
-            <div class="md:w-2/3 text-center md:text-left text-white">
-                <h2 class="text-3xl font-bold mb-4 text-blue-400">About Me</h2>
-                <p class="leading-relaxed text-lg mb-4">
-                    Hi, I am <strong><i>Niraj Karki</i></strong>. I am passionate about becoming a Python developer, and my journey has been fueled by a deep interest in building efficient, scalable applications.
-                </p>
-                <p class="leading-relaxed text-lg mb-4">
-                    I have dedicated myself to learning Python and have developed a strong understanding of its core concepts and libraries. My experience extends to frameworks like Django, which has allowed me to build full-stack web applications, as well as Django REST Framework for creating robust and scalable APIs.
-                </p>
-                <p class="leading-relaxed text-lg mb-4">
-                    I am constantly refining my skills and am always eager to embrace new challenges.
-                </p>
-            </div>
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
+      >
+        <!-- Profile Image Section -->
+        <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+          <img
+            src="images/me.jpg"
+            alt="Photo"
+            class="propic rounded-full w-64 h-64 object-cover shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105"
+          />
         </div>
+
+        <!-- Text Section -->
+        <div class="md:w-2/3 text-center md:text-left text-white">
+          <h2 class="text-3xl font-bold mb-4 text-blue-400">About Me</h2>
+          <p class="leading-relaxed text-lg mb-4">
+            Hi, I am <strong><i>Niraj Karki</i></strong
+            >. I am passionate about becoming a Python developer, and my journey
+            has been fueled by a deep interest in building efficient, scalable
+            applications.
+          </p>
+          <p class="leading-relaxed text-lg mb-4">
+            I have dedicated myself to learning Python and have developed a
+            strong understanding of its core concepts and libraries. My
+            experience extends to frameworks like Django, which has allowed me
+            to build full-stack web applications, as well as Django REST
+            Framework for creating robust and scalable APIs.
+          </p>
+          <p class="leading-relaxed text-lg mb-4">
+            I am constantly refining my skills and am always eager to embrace
+            new challenges.
+          </p>
+        </div>
+      </div>
     </section>
-    
 
     <div class="hr-container my-6">
-        <hr class="border-t-2 border-gray-700">
+      <hr class="border-t-2 border-gray-700" />
     </div>
 
     <section id="projects" class="py-10">
-        <div class="container mx-auto px-6">
-            <h2 class="text-2xl font-semibold mb-6">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Project 1 -->
-                <div class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700">
-                    <img src="images/Expense_Tracker.png" alt="Project 1" class="project-image mb-4 rounded-lg shadow-md cursor-pointer" data-image="images/Expense_Tracker.png">
-                    <h3 class="text-xl font-semibold">Expense Tracker</h3>
-                    <p class="text-lg">Project Created Using Django framework. It is a simple accounting app that tracks the total income and expenses made by an individual.</p>
-                    <a href="https://github.com/Niraj-commits/Basic_Expense_Tracker" target="_blank" class="text-blue-400 hover:text-blue-600">GitHub Repo</a>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700">
-                    <img src="images/Inventory_mgmt.png" alt="Project 2" class="project-image mb-4 rounded-lg shadow-md cursor-pointer" data-image="images/Inventory_mgmt.png">
-                    <h3 class="text-xl font-semibold">Inventory Management</h3>
-                    <p class="text-lg">This is a project Api created using django restframework.It is a backend api for an inventory management to check the products and basic inventory workings.</p>
-                    <a href="https://github.com/Niraj-commits/Inventory_mgmt_system" target="_blank" class="text-blue-400 hover:text-blue-600">GitHub Repo</a>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700">
-                    <img src="images/breaking-bad.png" alt="Project 3" class="project-image mb-4 rounded-lg shadow-md cursor-pointer" data-image="images/breaking-bad.png">
-                    <h3 class="text-xl font-semibold">Breaking Bad Api</h3>
-                    <p class="text-lg">This is a react project created by connecting an API that gives data about various characters in the famous show Breaking Bad.</p>
-                    <a href="https://github.com/Niraj-commits/breakingbadAPI" target="_blank" class="text-blue-400 hover:text-blue-600">GitHub Repo</a>
-                </div>
-            </div>
-    
-            <!-- Modal for Image -->
-            <!-- Modal for Image -->
-<!-- Modal for Image -->
-<!-- Modal for Image -->
-<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center">
-    <div class="relative p-4">
-        <!-- Enhanced Close Button with Thinner Border -->
-        <span id="closeModal" class="absolute top-2 right-2 text-white text-4xl font-extrabold cursor-pointer bg-red-800 rounded-full w-9 h-9 flex items-center justify-center hover:bg-red-700 border-4 border-white hover:border-red-500 transition-all duration-300">
-            &times;
-        </span>
-        <img id="modalImage" src="" alt="Full Image" class="max-w-full max-h-full object-contain">
-    </div>
-</div>
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700"
+          >
+            <img
+              src="images/Expense_Tracker.png"
+              alt="Project 1"
+              class="project-image mb-4 rounded-lg shadow-md cursor-pointer"
+              data-image="images/Expense_Tracker.png"
+            />
+            <h3 class="text-xl font-semibold">Expense Tracker</h3>
+            <p class="text-lg">
+              Project Created Using Django framework. It is a simple accounting
+              app that tracks the total income and expenses made by an
+              individual.
+            </p>
+            <a
+              href="https://github.com/Niraj-commits/Basic_Expense_Tracker"
+              target="_blank"
+              class="text-blue-400 hover:text-blue-600"
+              >GitHub Repo</a
+            >
+          </div>
 
+          <!-- Project 2 -->
+          <div
+            class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700"
+          >
+            <img
+              src="images/Inventory_mgmt.png"
+              alt="Project 2"
+              class="project-image mb-4 rounded-lg shadow-md cursor-pointer"
+              data-image="images/Inventory_mgmt.png"
+            />
+            <h3 class="text-xl font-semibold">Inventory Management</h3>
+            <p class="text-lg">
+              This is a project Api created using django restframework.It is a
+              backend api for an inventory management to check the products and
+              basic inventory workings.
+            </p>
+            <a
+              href="https://github.com/Niraj-commits/Inventory_mgmt_system"
+              target="_blank"
+              class="text-blue-400 hover:text-blue-600"
+              >GitHub Repo</a
+            >
+          </div>
 
-    
-            <!-- View More Button -->
-            <button id="viewMoreBtn" class="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 transition-all">
-                <span id="buttonText">View More</span>
-                <svg id="buttonIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                    <path d="M8 12a1 1 0 0 0 .707-.293l3-3a1 1 0 0 0-1.414-1.414L8 9.586 5.707 7.293a1 1 0 0 0-1.414 1.414l3 3A1 1 0 0 0 8 12z"/>
-                    <path d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
-                </svg>
-            </button>
+          <!-- Project 3 -->
+          <div
+            class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700"
+          >
+            <img
+              src="images/breaking-bad.png"
+              alt="Project 3"
+              class="project-image mb-4 rounded-lg shadow-md cursor-pointer"
+              data-image="images/breaking-bad.png"
+            />
+            <h3 class="text-xl font-semibold">Breaking Bad Api</h3>
+            <p class="text-lg">
+              This is a react project created by connecting an API that gives
+              data about various characters in the famous show Breaking Bad.
+            </p>
+            <a
+              href="https://github.com/Niraj-commits/breakingbadAPI"
+              target="_blank"
+              class="text-blue-400 hover:text-blue-600"
+              >GitHub Repo</a
+            >
+          </div>
         </div>
-    
-        <!-- Script to handle modal image opening -->
-        <script>
-            // Get all project images
-            const projectImages = document.querySelectorAll('.project-image');
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            const closeModal = document.getElementById('closeModal');
-    
-            // Add click event to each project image
-            projectImages.forEach(image => {
-                image.addEventListener('click', (e) => {
-                    const imageUrl = e.target.getAttribute('data-image');
-                    modalImage.src = imageUrl;  // Set modal image source
-                    modal.classList.remove('hidden');  // Show the modal
-                });
-            });
-    
-            // Close the modal when clicking the close button
-            closeModal.addEventListener('click', () => {
-                modal.classList.add('hidden');
-            });
-    
-            // Close the modal when clicking outside the image
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.add('hidden');
-                }
-            });
-        </script>
+
+        <div
+        id="imageModal"
+        class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center z-50"
+      >
+        <div class="relative w-full max-w-4xl bg-white p-4 rounded-lg shadow-lg">
+          <!-- Close Button at the Top-Right -->
+          <span
+            id="closeModal"
+            class="absolute top-2 right-2 text-white text-3xl font-extrabold cursor-pointer bg-red-800 rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-700 border-4 border-white hover:border-red-500 transition-all duration-300 z-10"
+          >
+            &times;
+          </span>
+          
+          <img
+            id="modalImage"
+            src=""
+            alt="Full Image"
+            class="w-full h-auto object-contain rounded-lg"
+          />
+        </div>
+      </div>
+      
+
+      
+
+      
+
+
+
+        <!-- View More Button -->
+        <button
+          id="viewMoreBtn"
+          class="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 transition-all"
+        >
+          <span id="buttonText">View More</span>
+          <svg
+            id="buttonIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-down-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 12a1 1 0 0 0 .707-.293l3-3a1 1 0 0 0-1.414-1.414L8 9.586 5.707 7.293a1 1 0 0 0-1.414 1.414l3 3A1 1 0 0 0 8 12z"
+            />
+            <path
+              d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Script to handle modal image opening -->
+      <script>
+        // Get all project images
+        const projectImages = document.querySelectorAll(".project-image");
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const closeModal = document.getElementById("closeModal");
+
+        // Add click event to each project image
+        projectImages.forEach((image) => {
+          image.addEventListener("click", (e) => {
+            const imageUrl = e.target.getAttribute("data-image");
+            modalImage.src = imageUrl; // Set modal image source
+            modal.classList.remove("hidden"); // Show the modal
+          });
+        });
+
+        // Close the modal when clicking the close button
+        closeModal.addEventListener("click", () => {
+          modal.classList.add("hidden");
+        });
+
+        // Close the modal when clicking outside the image
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.add("hidden");
+          }
+        });
+      </script>
     </section>
-    
-    
 
     <div class="hr-container my-6">
-        <hr class="border-t-2 border-gray-700">
+      <hr class="border-t-2 border-gray-700" />
     </div>
 
     <section id="skills" class="py-10">
-        <div class="container mx-auto px-6">
-            <h2 class="text-2xl font-semibold mb-6">Skills</h2>
-            <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-                <li class="flex items-center gap-2 text-lg"><img src="images/html.png" alt="HTML Logo" class="w-8 h-8"> HTML</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/css.png" alt="CSS Logo" class="w-8 h-8"> CSS</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/js.png" alt="JavaScript Logo" class="w-8 h-8"> JavaScript</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/figma.png" alt="Figma" class="w-8 h-8"> Figma</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/postgresql.svg" alt="PostgreSQL" class="w-8 h-8"> PostgreSQL</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/postman.svg" alt="Postman" class="w-8 h-8"> Postman</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/mysql.png" alt="mysql" class="w-8 h-8"> MySQL</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/django.png" alt="django" class="w-8 h-8"> Django</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/react.png" alt="react" class="w-8 h-8"> React</li>
-                <li class="flex items-center gap-2 text-lg"><img src="images/python.svg" alt="python" class="w-8 h-8"> Python</li>
-            </ul>
-        </div>
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-semibold mb-6">Skills</h2>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/html.png" alt="HTML Logo" class="w-8 h-8" /> HTML
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/css.png" alt="CSS Logo" class="w-8 h-8" /> CSS
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/js.png" alt="JavaScript Logo" class="w-8 h-8" />
+            JavaScript
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/figma.png" alt="Figma" class="w-8 h-8" /> Figma
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/postgresql.svg" alt="PostgreSQL" class="w-8 h-8" />
+            PostgreSQL
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/postman.svg" alt="Postman" class="w-8 h-8" />
+            Postman
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/mysql.png" alt="mysql" class="w-8 h-8" /> MySQL
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/django.png" alt="django" class="w-8 h-8" /> Django
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/react.png" alt="react" class="w-8 h-8" /> React
+          </li>
+          <li class="flex items-center gap-2 text-lg">
+            <img src="images/python.svg" alt="python" class="w-8 h-8" /> Python
+          </li>
+        </ul>
+      </div>
     </section>
 
     <div class="hr-container my-6">
-        <hr class="border-t-2 border-gray-700">
+      <hr class="border-t-2 border-gray-700" />
     </div>
     <section id="experience" class="py-16 bg-gray-800 text-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-blue-400 mb-6">Experience</h2>
-            <div class="experience-item mb-6 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
-                            <path d="M2 13V3h12v10H2zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2zm1 1h10v9H3V3z"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold">Pivotech Nepal Pvt. Ltd</h4>
-                </div>
-                <p class="text-lg"><strong>Position:</strong> Data Analyst</p>
-                <p class="text-lg"><strong>Duration:</strong> 21st Jan 2024 - 16th August 2024</p>
-                <p class="text-lg mt-4">Handled customer data using Excel and MySQL. Created various queries and updated data using MySQL. Customized user data and helped with detailed uploads.</p>
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-blue-400 mb-6">Experience</h2>
+        <div
+          class="experience-item mb-6 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-building"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 13V3h12v10H2zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2zm1 1h10v9H3V3z"
+                />
+              </svg>
             </div>
+            <h4 class="text-xl font-semibold">Pivotech Nepal Pvt. Ltd</h4>
+          </div>
+          <p class="text-lg"><strong>Position:</strong> Data Analyst</p>
+          <p class="text-lg">
+            <strong>Duration:</strong> 21st Jan 2024 - 16th August 2024
+          </p>
+          <p class="text-lg mt-4">
+            Handled customer data using Excel and MySQL. Created various queries
+            and updated data using MySQL. Customized user data and helped with
+            detailed uploads.
+          </p>
         </div>
-        <div class="hr-container my-6">
-            <hr class="border-t-2 border-gray-700">
-        </div>
+      </div>
+      <div class="hr-container my-6">
+        <hr class="border-t-2 border-gray-700" />
+      </div>
     </section>
-    
+
     <section id="education" class="py-16 bg-gray-800 text-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-blue-400 mb-8">Education</h2>
-            
-            <!-- Bachelors Degree -->
-            <div class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-                            <path d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold">Bachelors in Computer Applications</h4>
-                </div>
-                <p class="text-lg"><strong>University Name:</strong> Tribhuwan University</p>
-                <p class="text-lg"><strong>College Name:</strong> NIST</p>
-                <p class="text-lg"><strong>Enrolled Year:</strong> 2019</p>
-                <p class="text-lg"><strong>Graduation Year:</strong> 2024</p>
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-blue-400 mb-8">Education</h2>
+
+        <!-- Bachelors Degree -->
+        <div
+          class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-mortarboard"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z"
+                />
+              </svg>
             </div>
-            
-            <!-- +2 Degree -->
-            <div class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-                            <path d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold">+2</h4>
-                </div>
-                <p class="text-lg"><strong>College Name:</strong> NIST</p>
-                <p class="text-lg"><strong>Graduation Year:</strong> 2019</p>
-            </div>
-            
-            <!-- School -->
-            <div class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-                            <path d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold">School</h4>
-                </div>
-                <p class="text-lg"><strong>School Name:</strong> Tripura Glorious Academy</p>
-                <p class="text-lg"><strong>Graduation Year:</strong> 2018</p>
-            </div>
+            <h4 class="text-xl font-semibold">
+              Bachelors in Computer Applications
+            </h4>
+          </div>
+          <p class="text-lg">
+            <strong>University Name:</strong> Tribhuwan University
+          </p>
+          <p class="text-lg"><strong>College Name:</strong> NIST</p>
+          <p class="text-lg"><strong>Enrolled Year:</strong> 2019</p>
+          <p class="text-lg"><strong>Graduation Year:</strong> 2024</p>
         </div>
-        <div class="hr-container my-6">
-            <hr class="border-t-2 border-gray-700">
+
+        <!-- +2 Degree -->
+        <div
+          class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-mortarboard"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z"
+                />
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold">+2</h4>
+          </div>
+          <p class="text-lg"><strong>College Name:</strong> NIST</p>
+          <p class="text-lg"><strong>Graduation Year:</strong> 2019</p>
         </div>
+
+        <!-- School -->
+        <div
+          class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-mortarboard"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z"
+                />
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold">School</h4>
+          </div>
+          <p class="text-lg">
+            <strong>School Name:</strong> Tripura Glorious Academy
+          </p>
+          <p class="text-lg"><strong>Graduation Year:</strong> 2018</p>
+        </div>
+      </div>
+      <div class="hr-container my-6">
+        <hr class="border-t-2 border-gray-700" />
+      </div>
     </section>
-    
 
     <!-- <section id="certification" class="py-16 bg-gray-800 text-white">
         <div class="container mx-auto px-6">
@@ -268,36 +440,107 @@
             <hr class="border-t-2 border-gray-700">
         </div>
     </section> -->
-    
-    
 
     <section id="contact" class="py-10 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-2xl font-semibold mb-6 text-white text-center">Contact Me</h2>
-            <div class="contact-container flex justify-center items-center flex-wrap" style="display: flex; justify-content: center; align-items: center; gap: 2rem;">  <div class="contact-item text-center" style="display: flex; flex-direction: column; align-items: center;">
-                    <span class="text-white">Email:</span>
-                    <a href="mailto:karki.ni018@gmail.com" target="_blank" class="mt-2" style="display: inline-block; padding: 0.5rem; border-radius: 50%; background-color: #374151; transition: background-color 0.3s ease;">
-                        <img src="images/gmail.jpeg" alt="Email" width="30" height="30" style="border-radius: 50%; object-fit: contain;">  </a>
-                </div>
-                <div class="contact-item text-center" style="display: flex; flex-direction: column; align-items: center;">
-                    <span class="text-white">LinkedIn:</span>
-                    <a href="https://www.linkedin.com/in/nirajkarki1/" target="_blank" class="mt-2" style="display: inline-block; padding: 0.5rem; border-radius: 50%; background-color: #374151; transition: background-color 0.3s ease;">
-                        <img src="images/linkedin.png" alt="linkedin" width="30" height="30" style="border-radius: 50%; object-fit: contain;">  </a>
-                </div>
-                <div class="contact-item text-center" style="display: flex; flex-direction: column; align-items: center;">
-                    <span class="text-white">GitHub:</span>
-                    <a href="https://github.com/Niraj-commits" target="_blank" class="mt-2" style="display: inline-block; padding: 0.5rem; border-radius: 50%; background-color: #374151; transition: background-color 0.3s ease;">
-                        <img src="images/github.png" alt="github" width="30" height="30" style="border-radius: 50%; object-fit: contain;">  </a>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-semibold mb-6 text-white text-center">
+          Contact Me
+        </h2>
+        <div
+          class="contact-container flex justify-center items-center flex-wrap"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+          "
+        >
+          <div
+            class="contact-item text-center"
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <span class="text-white">Email:</span>
+            <a
+              href="mailto:karki.ni018@gmail.com"
+              target="_blank"
+              class="mt-2"
+              style="
+                display: inline-block;
+                padding: 0.5rem;
+                border-radius: 50%;
+                background-color: #374151;
+                transition: background-color 0.3s ease;
+              "
+            >
+              <img
+                src="images/gmail.jpeg"
+                alt="Email"
+                width="30"
+                height="30"
+                style="border-radius: 50%; object-fit: contain"
+              />
+            </a>
+          </div>
+          <div
+            class="contact-item text-center"
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <span class="text-white">LinkedIn:</span>
+            <a
+              href="https://www.linkedin.com/in/nirajkarki1/"
+              target="_blank"
+              class="mt-2"
+              style="
+                display: inline-block;
+                padding: 0.5rem;
+                border-radius: 50%;
+                background-color: #374151;
+                transition: background-color 0.3s ease;
+              "
+            >
+              <img
+                src="images/linkedin.png"
+                alt="linkedin"
+                width="30"
+                height="30"
+                style="border-radius: 50%; object-fit: contain"
+              />
+            </a>
+          </div>
+          <div
+            class="contact-item text-center"
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <span class="text-white">GitHub:</span>
+            <a
+              href="https://github.com/Niraj-commits"
+              target="_blank"
+              class="mt-2"
+              style="
+                display: inline-block;
+                padding: 0.5rem;
+                border-radius: 50%;
+                background-color: #374151;
+                transition: background-color 0.3s ease;
+              "
+            >
+              <img
+                src="images/github.png"
+                alt="github"
+                width="30"
+                height="30"
+                style="border-radius: 50%; object-fit: contain"
+              />
+            </a>
+          </div>
         </div>
-    </section>    
-    
+      </div>
+    </section>
 
     <footer class="bg-gray-800 text-center py-6">
-        <p>&copy; 2025 Niraj Karki. All rights reserved.</p>
+      <p>&copy; 2025 Niraj Karki. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
