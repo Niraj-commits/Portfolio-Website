@@ -1,0 +1,145 @@
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+#viewMoreBtn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#viewMoreBtn:hover {
+    background-color: #2b80d6; /* Slightly darker blue */
+    transform: scale(1.05); /* Slightly increase the button size */
+}
+
+#viewMoreBtn:active {
+    transform: scale(0.98); /* Slight shrink when clicked */
+}
+
+#viewMoreBtn svg {
+    transition: transform 0.3s ease;
+}
+
+#viewMoreBtn svg.rotate {
+    transform: rotate(180deg); /* Rotate icon when clicked */
+}
+
+#experience {
+    padding-bottom: 2rem; /* Reduced bottom padding */
+}
+
+/* Education Section Styling */
+#education {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* Education Item Styling */
+.education-item  {
+    background-color: #0a111b; /* Darker background for each education item */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for education item */
+.education-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+h2, h4 {
+    font-weight: bold;
+    color: white;
+}
+
+/* Icon inside education item */
+.education-item svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* Section Title */
+h2 {
+    color: #4fd1c5; /* Teal color for the section title */
+}
+
+/* Category Title */
+h4 {
+    color: #ffffff;
+}
+
+/* Paragraph Text */
+p {
+    color: #d1d5db; /* Light gray text for details */
+}
+
+/* Horizontal Rule Styling */
+hr {
+    border-top: 2px solid #4b5563;
+}
+
+/* Education Item Styling */
+.experience-item  {
+    background-color: #0a111b; /* Darker background for each education item */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for education item */
+.experience-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+h2, h4 {
+    font-weight: bold;
+    color: white;
+}
+
+/* Icon inside education item */
+.experience-item svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+
+#certification {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Education Item Styling */
+.certification-item  {
+    background-color: #0a111b; /* Darker background for each education item */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for education item */
+.certification-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+h2, h4 {
+    font-weight: bold;
+    color: white;
+}
+
+/* Icon inside education item */
+.certification-item svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
