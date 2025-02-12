@@ -144,7 +144,7 @@ h2, h4 {
     fill: white;
 }
 #skills {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 2rem;
   
   }
 
@@ -153,16 +153,16 @@ h2, h4 {
    
   }
 #experience {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 2rem;
    
   }
 #about {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 2rem;
    
 }
 
 #projects {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 2rem; /* Adjust this value to match your header's height */
   }
 
   
