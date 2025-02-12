@@ -21,3 +21,12 @@ document.getElementById("viewMoreBtn").addEventListener("click", function() {
     }, 500);
 });
 
+document.getElementById("downloadResume").addEventListener("click", function () {
+    // Create an anchor element
+    const a = document.createElement("a");
+    a.href = "public/resume.pdf"; // Update the path to your resume file
+    a.download = "Resume.pdf"; // Set the filename
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+});

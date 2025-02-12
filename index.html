@@ -18,43 +18,124 @@
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-12">
 
-    <section id="about" class="py-16 bg-gray-900">
-      <div
-        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
-      >
-        <!-- Profile Image Section -->
-        <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-          <img
-            src="images/me.jpg"
-            alt="Photo"
-            class="propic rounded-full w-64 h-64 object-cover shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105"
-          />
-        </div>
+           <!-- About Me -->
+           <section id="about" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+              <!-- Profile Image Section -->
+              <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center relative animate-fade-in">
+                <div class="relative w-64 h-64 rounded-full p-1 bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg">
+                  <img src="images/me.jpg" alt="Photo"
+                    class="w-full h-full rounded-full object-cover shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105 filter contrast-125 brightness-110" />
+                </div>
+              </div>
+          
+              <!-- Divider -->
+              <div class="hidden md:block w-1 h-64 bg-gray-600 mx-10"></div>
+          
+              <!-- Text Section with Glassmorphism -->
+              <div class="md:w-2/3 text-white animate-fade-in bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg">
+                <h2 class="text-4xl font-bold mb-6 text-blue-400 flex items-center">
+                  About Me
+                </h2>
+                <p class="leading-relaxed text-lg mb-4">
+                  Hi, I am <strong><i>Niraj Karki</i></strong>, a passionate 
+                  <span class="text-blue-300 font-semibold">Python Developer</span> who loves building efficient, 
+                  scalable applications.
+                </p>
+                <p class="leading-relaxed text-lg mb-4">
+                  I specialize in <span class="text-purple-300 font-semibold">Django</span> for full-stack 
+                  web applications and <span class="text-purple-300 font-semibold">Django REST Framework</span> 
+                  for developing robust APIs. I continuously refine my skills, staying up-to-date with the latest technologies.
+                </p>
+                <p class="leading-relaxed text-lg mb-6">
+                  I enjoy solving complex problems and contributing to meaningful projects. Let’s connect and create something awesome together!
+                </p>
+          
+                <!-- Call to Action -->
+                <div class="flex flex-wrap gap-4">
+                  <a href="#contact"
+                    class="px-6 py-3 text-lg font-semibold text-white bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transition duration-300">
+                    Contact Me
+                  </a>
+                  <button id="downloadResume"
+    class="px-6 py-3 text-lg font-semibold text-white bg-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition duration-300">
+    Download Resume
+</button>
 
-        <!-- Text Section -->
-        <div class="md:w-2/3 text-center md:text-left text-white">
-          <h2 class="text-3xl font-bold mb-4 text-blue-400">About Me</h2>
-          <p class="leading-relaxed text-lg mb-4">
-            Hi, I am <strong><i>Niraj Karki</i></strong
-            >. I am passionate about becoming a Python developer, and my journey
-            has been fueled by a deep interest in building efficient, scalable
-            applications.
-          </p>
-          <p class="leading-relaxed text-lg mb-4">
-            I have dedicated myself to learning Python and have developed a
-            strong understanding of its core concepts and libraries. My
-            experience extends to frameworks like Django, which has allowed me
-            to build full-stack web applications, as well as Django REST
-            Framework for creating robust and scalable APIs.
-          </p>
-          <p class="leading-relaxed text-lg mb-4">
-            I am constantly refining my skills and am always eager to embrace
-            new challenges.
-          </p>
-        </div>
-      </div>
-    </section>
-
+                </div>
+          
+                <!-- Social Links -->
+                <div class="mt-6 flex gap-4">
+                  <a href="https://github.com/yourgithub" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-github text-2xl"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/yourlinkedin" target="_blank" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                  </a>
+                  <a href="mailto:your.email@example.com" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fas fa-envelope text-2xl"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+           
+          
+            <!-- Custom Styles -->
+            <style>
+              .animate-fade-in {
+                animation: fadeIn 1.5s ease-in-out;
+              }
+          
+              @keyframes fadeIn {
+                from {
+                  opacity: 0;
+                  transform: translateY(10px);
+                }
+          
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+            </style>
+          </section>
+           <!-- Skills Section -->
+           <div class="container mx-auto mt-16 px-6 text-white">
+            <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div>
+                <p class="font-semibold mb-2">Python</p>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                  <div class="bg-blue-500 h-4 rounded-full w-90%"></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-semibold mb-2">Django</p>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                  <div class="bg-purple-500 h-4 rounded-full w-85%"></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-semibold mb-2">JavaScript</p>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                  <div class="bg-yellow-500 h-4 rounded-full w-75%"></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-semibold mb-2">React</p>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                  <div class="bg-blue-400 h-4 rounded-full w-70%"></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-semibold mb-2">PostgreSQL</p>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                  <div class="bg-green-400 h-4 rounded-full w-80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
     <div class="hr-container my-6">
       <hr class="border-t-2 border-gray-700" />
     </div>
@@ -62,212 +143,194 @@
 
      <!-- Skills Section  -->
 
-     <section id="skills" class="py-10">
+     <section id="skills" class="py-12 bg-gray-900 text-white">
       <div class="container mx-auto px-6">
-        <h2 class="text-2xl font-semibold mb-6">Skills</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/html.png" alt="HTML Logo" class="w-8 h-8" /> HTML
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/css.png" alt="CSS Logo" class="w-8 h-8" /> CSS
-          </li>
-          <li class="flex items-center gap-2 text-lg">
+        <h2 class="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/html.png" alt="HTML Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">HTML</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/css.png" alt="CSS Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">CSS</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
             <img src="images/js.png" alt="JavaScript Logo" class="w-8 h-8" />
-            JavaScript
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/figma.png" alt="Figma" class="w-8 h-8" /> Figma
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/postgresql.svg" alt="PostgreSQL" class="w-8 h-8" />
-            PostgreSQL
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/postman.svg" alt="Postman" class="w-8 h-8" />
-            Postman
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/mysql.png" alt="mysql" class="w-8 h-8" /> MySQL
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/django.png" alt="django" class="w-8 h-8" /> Django
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/react.png" alt="react" class="w-8 h-8" /> React
-          </li>
-          <li class="flex items-center gap-2 text-lg">
-            <img src="images/python.svg" alt="python" class="w-8 h-8" /> Python
-          </li>
-        </ul>
+            <span class="text-base font-medium">JavaScript</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/react.png" alt="React Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">React</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/python.svg" alt="Python Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">Python</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/django.png" alt="Django Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">Django</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/mysql.png" alt="MySQL Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">MySQL</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/postgresql.svg" alt="PostgreSQL Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">PostgreSQL</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/postman.svg" alt="Postman Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">Postman</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
+            <img src="images/figma.png" alt="Figma Logo" class="w-8 h-8" />
+            <span class="text-base font-medium">Figma</span>
+          </div>
+        </div>
       </div>
     </section>
+    
+    
 
     <div class="hr-container my-6">
       <hr class="border-t-2 border-gray-700" />
     </div>
 
-    <!-- Projects Section  -->
-    <section id="projects" class="py-10">
-      <div class="container mx-auto px-6">
-        <h2 class="text-2xl font-semibold mb-6">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Project 1 -->
-          <div
-            class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700"
-          >
-            <img
-              src="images/Expense_Tracker.png"
-              alt="Project 1"
-              class="project-image mb-4 rounded-lg shadow-md cursor-pointer"
-              data-image="images/Expense_Tracker.png"
-            />
-            <h3 class="text-xl font-semibold">Expense Tracker</h3>
-            <p class="text-lg">
-              Project Created Using Django framework. It is a simple accounting
-              app that tracks the total income and expenses made by an
-              individual.
-            </p>
-            <a
-              href="https://github.com/Niraj-commits/Basic_Expense_Tracker"
-              target="_blank"
-              class="text-blue-400 hover:text-blue-600"
-              >GitHub Repo</a
-            >
-          </div>
+<!-- Projects Section -->
+<section id="projects" class="py-10 bg-gray-900 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-6 text-center text-blue-400">Projects</h2>
 
-          <!-- Project 2 -->
-          <div
-            class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700"
-          >
-            <img
-              src="images/Inventory_mgmt.png"
-              alt="Project 2"
-              class="project-image mb-4 rounded-lg shadow-md cursor-pointer"
-              data-image="images/Inventory_mgmt.png"
-            />
-            <h3 class="text-xl font-semibold">Inventory Management</h3>
-            <p class="text-lg">
-              This is a project Api created using django restframework.It is a
-              backend api for an inventory management to check the products and
-              basic inventory workings.
-            </p>
-            <a
-              href="https://github.com/Niraj-commits/Inventory_mgmt_system"
-              target="_blank"
-              class="text-blue-400 hover:text-blue-600"
-              >GitHub Repo</a
-            >
-          </div>
-
-          <!-- Project 3 -->
-          <div
-            class="project bg-gray-800 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:bg-gray-700"
-          >
-            <img
-              src="images/breaking-bad.png"
-              alt="Project 3"
-              class="project-image mb-4 rounded-lg shadow-md cursor-pointer"
-              data-image="images/breaking-bad.png"
-            />
-            <h3 class="text-xl font-semibold">Breaking Bad Api</h3>
-            <p class="text-lg">
-              This is a react project created by connecting an API that gives
-              data about various characters in the famous show Breaking Bad.
-            </p>
-            <a
-              href="https://github.com/Niraj-commits/breakingbadAPI"
-              target="_blank"
-              class="text-blue-400 hover:text-blue-600"
-              >GitHub Repo</a
-            >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="project-card bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-all">
+        <div class="relative">
+          <img src="images/Expense_Tracker.png" alt="Expense Tracker" 
+               class="project-image mb-4 rounded-lg shadow-md cursor-pointer" data-image="images/Expense_Tracker.png" />
+          <div class="absolute top-3 right-3 bg-blue-600 text-white px-2 py-1 text-xs rounded-md shadow-md">
+            Django
           </div>
         </div>
-
-        <div
-        id="imageModal"
-        class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center z-50"
-      >
-        <div class="relative w-full max-w-4xl bg-white p-4 rounded-lg shadow-lg">
-          <!-- Close Button at the Top-Right -->
-          <span
-            id="closeModal"
-            class="absolute top-2 right-2 text-white text-3xl font-extrabold cursor-pointer bg-red-800 rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-700 border-4 border-white hover:border-red-500 transition-all duration-300 z-10"
-          >
-            &times;
-          </span>
-          
-          <img
-            id="modalImage"
-            src=""
-            alt="Full Image"
-            class="w-full h-auto object-contain rounded-lg"
-          />
+        <h3 class="text-2xl font-semibold">Expense Tracker</h3>
+        <p class="text-gray-300 text-lg my-2">
+          A Django-based accounting app that helps individuals track income and expenses efficiently.
+          It allows users to add, edit, and delete transactions while summarizing total expenses.
+        </p>
+        <div class="flex gap-3 mt-4">
+          <a href="https://github.com/Niraj-commits/Basic_Expense_Tracker" target="_blank"
+             class="px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-all">GitHub</a>
         </div>
       </div>
-      
 
-      
+      <!-- Project 2 -->
+      <div class="project-card bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-all">
+        <div class="relative">
+          <img src="images/Inventory_mgmt.png" alt="Inventory Management"
+               class="project-image mb-4 rounded-lg shadow-md cursor-pointer" data-image="images/Inventory_mgmt.png" />
+          <div class="absolute top-3 right-3 bg-purple-600 text-white px-2 py-1 text-xs rounded-md shadow-md">
+            Django API
+          </div>
+        </div>
+        <h3 class="text-2xl font-semibold">Inventory Management API</h3>
+        <p class="text-gray-300 text-lg my-2">
+          A REST API built with Django that allows users to track products in an inventory system.
+          It provides endpoints to add, update, and delete inventory items efficiently.
+        </p>
+        <div class="flex gap-3 mt-4">
+          <a href="https://github.com/Niraj-commits/Inventory_mgmt_system" target="_blank"
+             class="px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-all">GitHub</a>
+        </div>
+      </div>
 
-      
+      <!-- Project 3 -->
+      <div class="project-card bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-all">
+        <div class="relative">
+          <img src="images/breaking-bad.png" alt="Breaking Bad API"
+               class="project-image mb-4 rounded-lg shadow-md cursor-pointer" data-image="images/breaking-bad.png" />
+          <div class="absolute top-3 right-3 bg-green-600 text-white px-2 py-1 text-xs rounded-md shadow-md">
+            React API
+          </div>
+        </div>
+        <h3 class="text-2xl font-semibold">Breaking Bad API</h3>
+        <p class="text-gray-300 text-lg my-2">
+          A React-based application that fetches character details from the Breaking Bad API.
+          Users can search and view information about different characters from the show.
+        </p>
+        <div class="flex gap-3 mt-4">
+          <a href="https://github.com/Niraj-commits/breakingbadAPI" target="_blank"
+             class="px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-all">GitHub</a>
+        </div>
+      </div>
+    </div>
 
-
-
-        <!-- View More Button -->
-        <button
-          id="viewMoreBtn"
-          class="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 transition-all"
-        >
-          <span id="buttonText">View More</span>
-          <svg
-            id="buttonIcon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-arrow-down-circle"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 12a1 1 0 0 0 .707-.293l3-3a1 1 0 0 0-1.414-1.414L8 9.586 5.707 7.293a1 1 0 0 0-1.414 1.414l3 3A1 1 0 0 0 8 12z"
-            />
-            <path
-              d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"
-            />
-          </svg>
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
+      <div class="relative w-full max-w-4xl bg-gray-900 p-6 rounded-lg shadow-xl">
+        <button id="closeModal"
+                class="absolute top-2 right-2 text-white bg-red-600 px-3 py-1 rounded-full text-2xl hover:bg-red-700">
+          &times;
         </button>
+        <img id="modalImage" src="" alt="Project Image" class="w-full h-auto object-contain rounded-lg">
       </div>
+    </div>
 
-      <!-- Script to handle modal image opening -->
-      <script>
-        // Get all project images
-        const projectImages = document.querySelectorAll(".project-image");
-        const modal = document.getElementById("imageModal");
-        const modalImage = document.getElementById("modalImage");
-        const closeModal = document.getElementById("closeModal");
+    <!-- View More Button -->
+    <div class="text-center mt-8">
+      <button id="viewMoreBtn"
+              class="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 transition-all">
+        <span id="buttonText">View More</span>
+        <svg id="buttonIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+             class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+          <path d="M8 12a1 1 0 0 0 .707-.293l3-3a1 1 0 0 0-1.414-1.414L8 9.586 5.707 7.293a1 1 0 0 0-1.414 1.414l3 3A1 1 0 0 0 8 12z"/>
+          <path d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
 
-        // Add click event to each project image
-        projectImages.forEach((image) => {
-          image.addEventListener("click", (e) => {
-            const imageUrl = e.target.getAttribute("data-image");
-            modalImage.src = imageUrl; // Set modal image source
-            modal.classList.remove("hidden"); // Show the modal
-          });
-        });
+<!-- JavaScript for Modal & View More -->
+<script>
+  // Open Image in Modal
+  const projectImages = document.querySelectorAll(".project-image");
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const closeModal = document.getElementById("closeModal");
 
-        // Close the modal when clicking the close button
-        closeModal.addEventListener("click", () => {
-          modal.classList.add("hidden");
-        });
+  projectImages.forEach((image) => {
+    image.addEventListener("click", (e) => {
+      modalImage.src = e.target.getAttribute("data-image");
+      modal.classList.remove("hidden");
+    });
+  });
 
-        // Close the modal when clicking outside the image
-        modal.addEventListener("click", (e) => {
-          if (e.target === modal) {
-            modal.classList.add("hidden");
-          }
-        });
-      </script>
-    </section>
+  closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.add("hidden");
+  });
+
+  // View More Button Functionality
+  const viewMoreBtn = document.getElementById("viewMoreBtn");
+  const buttonText = document.getElementById("buttonText");
+  const buttonIcon = document.getElementById("buttonIcon");
+
+  let expanded = false;
+
+  viewMoreBtn.addEventListener("click", () => {
+    expanded = !expanded;
+    if (expanded) {
+      buttonText.textContent = "View Less";
+      buttonIcon.classList.remove("bi-arrow-down-circle");
+      buttonIcon.classList.add("bi-arrow-up-circle");
+    } else {
+      buttonText.textContent = "View More";
+      buttonIcon.classList.remove("bi-arrow-up-circle");
+      buttonIcon.classList.add("bi-arrow-down-circle");
+    }
+  });
+</script>
 
     <div class="hr-container my-6">
       <hr class="border-t-2 border-gray-700" />
