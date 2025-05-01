@@ -1,578 +1,639 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Website</title>
+  <title>Niraj Karki | Python Developer</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Logo If I need anytime -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body class="bg-gray-900 text-white">
-  <header class="sticky top-0 z-50 bg-gray-800 shadow-md">
-    
-      <nav class="container mx-auto px-3 py-3 flex items-center justify-between">
-        <!-- Left Section: Name -->
-        <div class="flex-shrink-0">
-          <h1 class="text-3xl font-semibold text-white">Niraj Karki</h1>
-        </div>
-        <!-- Center Section: Navigation Links (Hidden on Mobile) -->
-        <div class="hidden lg:flex-grow lg:flex justify-center space-x-6 text-white text-lg">
-          <a href="#about" class="hover:text-gray-300">About</a>
-          <a href="#skills" class="hover:text-gray-300">Skills</a>
-          <a href="#projects" class="hover:text-gray-300">Projects</a>
-          <a href="#education" class="hover:text-gray-300">Education</a>
-          <a href="#experience" class="hover:text-gray-300">Experience</a>
-          <a href="#contact" class="hover:text-gray-300">Contact</a>
-          <!-- <a href="#certificate" class="hover:text-gray-300">Certificate</a> -->
-        </div>
-        <!-- Right Section: Hamburger Menu for Mobile -->
-        <div class="lg:hidden flex-shrink-0">
-          <button id="hamburger" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-      </nav>
-      <!-- Mobile Menu (Hidden by Default) -->
-      <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white text-lg">
-        <a href="#about" class="block px-6 py-2 hover:bg-gray-700">About</a>
-        <a href="#skills" class="block px-6 py-2 hover:bg-gray-700">Skills</a>
-        <a href="#projects" class="block px-6 py-2 hover:bg-gray-700">Projects</a>
-        <a href="#experience" class="block px-6 py-2 hover:bg-gray-700">Experience</a>
-        <a href="#education" class="block px-6 py-2 hover:bg-gray-700">Education</a>
-        <!-- <a href="#certificate" class="block px-6 py-2 hover:bg-gray-700">Certificate</a> -->
+  <header class="sticky top-0 z-50 bg-gray-900 shadow-lg border-b border-gray-800">
+    <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <h1 class="text-2xl md:text-3xl font-bold text-white tracking-wide">
+          <span class="text-blue-400">N</span>iraj <span class="text-blue-400">K</span>arki
+        </h1>
       </div>
-    </header>
-
-    <div class="container mx-auto px-4 sm:px-6 lg:px-12">
-
-      <!-- About Me -->
-      <section id="about" class="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-          <!-- Profile Image Section -->
-          <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center relative animate-fade-in">
-            <div class="relative w-64 h-64 rounded-full p-1 bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg">
-              <img src="images/me.jpg" alt="Photo"
-                class="w-full h-full rounded-full object-cover shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-105 filter contrast-125 brightness-110" />
-            </div>
-          </div>
-
-          <!-- Divider -->
-          <div class="hidden md:block w-1 h-64 bg-gray-600 mx-10"></div>
-
-          <!-- Text Section with Glassmorphism -->
-          <div
-            class="md:w-2/3 text-white animate-fade-in bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg">
-            <h2 class="text-4xl font-bold mb-6 text-blue-400 flex items-center">
-              About Me
-            </h2>
-            <p class="leading-relaxed text-lg mb-4">
-              Hi, I am <strong><i>Niraj Karki</i></strong>, a passionate
-              <span class="text-blue-300 font-semibold">Python Developer</span> who loves building efficient,
-              scalable applications.
-            </p>
-            <p class="leading-relaxed text-lg mb-4">
-              I specialize in <span class="text-purple-300 font-semibold">Django</span> for full-stack
-              web applications and <span class="text-purple-300 font-semibold">Django REST Framework</span>
-              for developing robust APIs. I continuously refine my skills, staying up-to-date with the latest
-              technologies.
-            </p>
-            <p class="leading-relaxed text-lg mb-6">
-              I enjoy solving complex problems and contributing to meaningful projects. Let’s connect and create
-              something awesome together!
-            </p>
-
-            <!-- Call to Action -->
-            <div class="flex flex-wrap gap-4 justify-center">
-              <a href="#contact"
-                class="px-6 py-3 text-lg font-semibold text-white bg-blue-800 rounded-full shadow-lg hover:bg-green-600 transition duration-300 w-full sm:w-auto text-center">
-                Contact Me
-              </a>
-              <button id="downloadResume"
-                class="px-6 py-3 text-lg font-semibold text-white bg-blue-800 rounded-full shadow-lg hover:bg-green-600 transition duration-300 w-full sm:w-auto text-center">
-                Download Resume
-              </button>
-            </div>
-
-          </div>
-      </section>
-
-      <div class="hr-container my-6">
-        <hr class="border-t-2 border-gray-700" />
+  
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex space-x-8 text-white text-base font-medium">
+        <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+        <a href="#education" class="hover:text-blue-400 transition-colors">Education</a>
+        <a href="#certification" class="hover:text-blue-400 transition-colors">Certifications</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
       </div>
-
-
-      <!-- Skills Section -->
-      <section id="skills" class="py-12 bg-gray-900 text-white mb-3">
-
-        <div class="container mx-auto mt-2 px-6 text-white">
-          <h2 class="text-3xl font-bold text-center text-blue-400 mb-8">Skills</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div>
-              <p class="font-semibold mb-2">Python</p>
-              <div class="w-full bg-gray-700 rounded-full h-4">
-                <div class="bg-blue-500 h-4 rounded-full w-90%"></div>
-              </div>
-            </div>
-            <div>
-              <p class="font-semibold mb-2">Django</p>
-              <div class="w-full bg-gray-700 rounded-full h-4">
-                <div class="bg-purple-500 h-4 rounded-full w-85%"></div>
-              </div>
-            </div>
-            <div>
-              <p class="font-semibold mb-2">JavaScript</p>
-              <div class="w-full bg-gray-700 rounded-full h-4">
-                <div class="bg-yellow-500 h-4 rounded-full w-75%"></div>
-              </div>
-            </div>
-            <!-- <div>
-              <p class="font-semibold mb-2">React</p>
-              <div class="w-full bg-gray-700 rounded-full h-4">
-                <div class="bg-blue-400 h-4 rounded-full w-70%"></div>
-              </div>
-            </div> -->
-            <div>
-              <p class="font-semibold mb-2">PostgreSQL</p>
-              <div class="w-full bg-gray-700 rounded-full h-4">
-                <div class="bg-green-400 h-4 rounded-full w-80%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section  -->
-
-      <section class="py-12 bg-gray-900 text-white" id="technical_skills">
-        <div class="container mx-auto px-6">
-          <h2 class="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
-          <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/html.png" alt="HTML Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">HTML</span>
-            </div>
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/css.png" alt="CSS Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">CSS</span>
-            </div>
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/js.png" alt="JavaScript Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">JavaScript</span>
-            </div>
-            <!-- <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/react.png" alt="React Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">React</span>
-            </div> -->
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/python.svg" alt="Python Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">Python</span>
-            </div>
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/django.png" alt="Django Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">Django</span>
-            </div>
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/mysql.png" alt="MySQL Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">MySQL</span>
-            </div>
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/postgresql.svg" alt="PostgreSQL Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">PostgreSQL</span>
-            </div>
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/postman.svg" alt="Postman Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">Postman</span>
-            </div>
-            <div
-              class="flex flex-col items-center gap-2 p-3 bg-gray-800 rounded-md shadow-md hover:scale-105 transition-transform">
-              <img src="images/figma.png" alt="Figma Logo" class="w-8 h-8" />
-              <span class="text-base font-medium">Figma</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      <div class="hr-container my-6">
-        <hr class="border-t-2 border-gray-700" />
-      </div>
-
-      <!-- Projects Section -->
-      <section id="projects" class="py-10 bg-gray-900 text-white">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl font-bold mb-6 text-center text-blue-400">Projects</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- Project 1 -->
-            <div class="project-card bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-all"
-              data-images='["images/library_mgmt/custom_admin.png","images/library_mgmt/custom_user.png","images/library_mgmt/Routes.png","images/library_mgmt/documentation.png","images/library_mgmt/Filters.png","images/library_mgmt/Documentation_links.png"]'>
-              <div class="relative">
-                <img src="images/library_mgmt/custom_admin.png" alt="Library Management System"
-                  class="project-image mb-4 rounded-lg shadow-md cursor-pointer object-contain"
-                  style="width: 300px; height: 200px;" />
-                <div class="absolute top-3 right-3 bg-green-600 text-white px-2 py-1 text-xs rounded-md shadow-md">
-                  Django API
-                </div>
-              </div>
-              <h3 class="text-2xl font-semibold">Library Management API</h3>
-              <p class="text-gray-300 text-lg my-2">
-                A Python-based application that helps in keeping track of users' actions like borrowing and returning
-                books.
-              </p>
-              <div class="flex gap-3 mt-4">
-                <a href="https://github.com/Niraj-commits/Library_mgmt_system.git" target="_blank"
-                  class="px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-all">GitHub</a>
-              </div>
-            </div>
-
-            <div id="imageModal"
-              class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
-              <div class="relative w-full max-w-4xl bg-gray-900 p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <button id="closeModal"
-                  class="absolute top-3 right-3 text-white bg-red-600 px-3 py-1 rounded-full text-2xl hover:bg-red-700">
-                  &times;
-                </button>
-                <div class="flex justify-between items-center w-full">
-                  <button id="prevBtn"
-                    class="text-white text-3xl p-2 bg-gray-700 rounded-full hover:bg-gray-600">&lt;</button>
-                  <img id="modalImage" src="" alt="Project Images"
-                    class="w-[500px] h-[350px] object-contain rounded-lg" />
-                  <button id="nextBtn"
-                    class="text-white text-3xl p-2 bg-gray-700 rounded-full hover:bg-gray-600">&gt;</button>
-                </div>
-                <!-- Page num -->
-                <div id="imageInfo" class="text-light mt-4 font-bold"></div>
-              </div>
-            </div>
-
-            <!-- Project-2 -->
-            <div class="project-card bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-all"
-              data-images='["images/expense_tracker/home_page.png"]'>
-              <div class="relative">
-                <img src="images/expense_tracker/home_page.png" alt="Expense Tracker"
-                  class="project-image mb-4 rounded-lg shadow-md cursor-pointer object-contain"
-                  style="width: 300px; height: 200px;" />
-                <div class="absolute top-3 right-3 bg-green-600 text-white px-2 py-1 text-xs rounded-md shadow-md">
-                  Django
-                </div>
-              </div>
-              <h3 class="text-2xl font-semibold">Expense Tracker</h3>
-              <p class="text-gray-300 text-lg my-2">
-                A Django-based accounting app that helps individuals track income and expenses efficiently.
-                It allows users to add, edit, and delete transactions while summarizing total expenses.
-              </p>
-              <div class="flex gap-3 mt-4">
-                <a href="https://github.com/Niraj-commits/Basic_Expense_Tracker" target="_blank"
-                  class="px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-all">GitHub</a>
-              </div>
-            </div>
-
-            <div id="imageModal"
-              class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
-              <div class="relative w-full max-w-4xl bg-gray-900 p-6 rounded-lg shadow-xl flex flex-col items-center">
-                <button id="closeModal"
-                  class="absolute top-3 right-3 text-white bg-red-600 px-3 py-1 rounded-full text-2xl hover:bg-red-700">
-                  &times;
-                </button>
-                <div class="flex justify-between items-center w-full">
-                  <button id="prevBtn"
-                    class="text-white text-3xl p-2 bg-gray-700 rounded-full hover:bg-gray-600">&lt;</button>
-                  <img id="modalImage" src="" alt="Project Images"
-                    class="w-[500px] h-[350px] object-contain rounded-lg" />
-                  <button id="nextBtn"
-                    class="text-white text-3xl p-2 bg-gray-700 rounded-full hover:bg-gray-600">&gt;</button>
-                </div>
-                <!-- Page num -->
-                <div id="imageInfo" class="text-light mt-4 font-bold"></div>
-              </div>
-            </div>
-
-            <!-- project3  -->
-            <div class="project-card bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-all"
-            data-images='["images/inventory_mgmt/category.png"]'>
-            <div class="relative">
-              <img src="images/inventory_mgmt/category.png" alt="Inventory Mgmt"
-                class="project-image mb-4 rounded-lg shadow-md cursor-pointer object-contain"
-                style="width: 300px; height: 200px;" />
-              <div class="absolute top-3 right-3 bg-green-600 text-white px-2 py-1 text-xs rounded-md shadow-md">
-                Django
-              </div>
-            </div>
-            <h3 class="text-2xl font-semibold">Invenory Management API</h3>
-            <p class="text-gray-300 text-lg my-2">
-              A REST API built with Django that allows users to track products in an inventory system.
-              It provides endpoints to add, update, and delete inventory items efficiently.
-            </p>
-            <div class="flex gap-3 mt-4">
-              <a href="https://github.com/Niraj-commits/Inventory_mgmt_system" target="_blank"
-                class="px-4 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition-all">GitHub</a>
-            </div>
-          </div>
-
-          <div id="imageModal"
-            class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
-            <div class="relative w-full max-w-4xl bg-gray-900 p-6 rounded-lg shadow-xl flex flex-col items-center">
-              <button id="closeModal"
-                class="absolute top-3 right-3 text-white bg-red-600 px-3 py-1 rounded-full text-2xl hover:bg-red-700">
-                &times;
-              </button>
-              <div class="flex justify-between items-center w-full">
-                <button id="prevBtn"
-                  class="text-white text-3xl p-2 bg-gray-700 rounded-full hover:bg-gray-600">&lt;</button>
-                <img id="modalImage" src="" alt="Project Images"
-                  class="w-[500px] h-[350px] object-contain rounded-lg" />
-                <button id="nextBtn"
-                  class="text-white text-3xl p-2 bg-gray-700 rounded-full hover:bg-gray-600">&gt;</button>
-              </div>
-              <!-- Page num -->
-              <div id="imageInfo" class="text-light mt-4 font-bold"></div>
-            </div>
-          </div>
-            <!-- Projects final div -->
-            </div>
-
-      </section>
-      <!-- View More Button -->
-      <div class="text-center mt-8">
-        <button id="viewMoreBtn"
-          class="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 transition-all">
-          <span id="buttonText">View More</span>
-          <svg id="buttonIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            class="bi bi-arrow-down-circle transition-transform" viewBox="0 0 16 16">
-            <path
-              d="M8 12a1 1 0 0 0 .707-.293l3-3a1 1 0 0 0-1.414-1.414L8 9.586 5.707 7.293a1 1 0 0 0-1.414 1.414l3 3A1 1 0 0 0 8 12z" />
-            <path d="M8 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" />
+  
+      <!-- Mobile Nav Toggle -->
+      <div class="lg:hidden">
+        <button id="hamburger" class="text-white focus:outline-none">
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd" />
           </svg>
         </button>
-      </div>
-    </div>
-    </div>
-
-    <div class="hr-container my-6">
-      <hr class="border-t-2 border-gray-700" />
-    </div>
-
-
-    <section id="experience" class="py-16 bg-gray-800 text-white">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-blue-400 mb-6">Experience</h2>
-        <div
-          class="experience-item mb-6 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-          <div class="flex items-center mb-4">
-            <div class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-building"
-                viewBox="0 0 16 16">
-                <path
-                  d="M2 13V3h12v10H2zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2zm1 1h10v9H3V3z" />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold">Pivotech Nepal Pvt. Ltd</h4>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden absolute top-16 right-0 left-0 bg-gray-800 shadow-xl rounded-b-lg py-2">
+          <div class="flex flex-col text-center">
+            <a href="#about" class="py-3 hover:bg-gray-700">About</a>
+            <a href="#skills" class="py-3 hover:bg-gray-700">Skills</a>
+            <a href="#projects" class="py-3 hover:bg-gray-700">Projects</a>
+            <a href="#experience" class="py-3 hover:bg-gray-700">Experience</a>
+            <a href="#education" class="py-3 hover:bg-gray-700">Education</a>
+            <a href="#certification" class="py-3 hover:bg-gray-700">Certifications</a>
+            <a href="#contact" class="py-3 hover:bg-gray-700">Contact</a>
           </div>
-          <p class="text-lg"><strong>Position:</strong> Data Analyst</p>
-          <p class="text-lg">
-            <strong>Duration:</strong> 21st Jan 2024 - 16th August 2024
-          </p>
-          <p class="text-lg mt-4">
-            Handled customer data using Excel and MySQL. Created various queries
-            and updated data using MySQL. Customized user data and helped with
-            detailed uploads.
-          </p>
         </div>
       </div>
-      <div class="hr-container my-6">
-        <hr class="border-t-2 border-gray-700" />
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full">
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="text-white">Hello, I'm </span>
+            <span class="text-blue-400">Niraj Karki</span>
+          </h2>
+          <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-300">
+            Python Developer
+          </h3>
+          <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+            Specializing in Django and RESTful APIs with a passion for creating efficient, 
+            data-driven backend solutions.
+          </p>
+          <div class="flex gap-4">
+            <a href="#contact" class="px-6 py-3 bg-gray-500 text-white font-medium rounded-lg hover:bg-blue-800 transition-colors flex items-center">
+              <i class="fas fa-envelope mr-2"></i> Contact Me
+            </a>
+            <button id="downloadResumeBtn" class="bg-gray-500 hover:bg-blue-800 text-white font-medium rounded-lg text-sm px-5 py-3 inline-flex items-center transition-colors">
+              <i class="fas fa-download mr-2"></i>
+              Download Resume
+            </button>
+            
+          </div>
+        </div>
+        <div class="md:w-2/5">
+          <div class="rounded-full border-4 border-blue-400 p-1 shadow-xl inline-block">
+            <img src="images/me.jpg" alt="Niraj Karki" class="rounded-full h-64 w-64 object-cover" />
+          </div>
+        </div>
+      </div>
+      <!-- Wave svg divider -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+          <path fill="#111827" fill-opacity="1" d="M0,96L60,85.3C120,75,240,53,360,48C480,43,600,53,720,69.3C840,85,960,107,1080,101.3C1200,96,1320,64,1380,48L1440,32L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path>
+        </svg>
       </div>
     </section>
 
-
-    <!-- Education Section  -->
-
-    <section id="education" class="py-16 bg-gray-800 text-white">
-      <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-blue-400 mb-8">Education</h2>
-
-        <!-- Bachelors Degree -->
-        <div
-          class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-          <div class="flex items-center mb-4">
-            <div class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" min-width="24" min-height="24" fill="currentColor"
-                class="bi bi-mortarboard" viewBox="0 0 16 16">
-                <path d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z" />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold">
-              Bachelors in Computer Applications
-            </h4>
-          </div>
-          <p class="text-lg">
-            <strong>University Name:</strong> Tribhuwan University
-          </p>
-          <p class="text-lg"><strong>College Name:</strong> NIST</p>
-          <p class="text-lg"><strong>Enrolled Year:</strong> 2019</p>
-          <p class="text-lg"><strong>Graduation Year:</strong> 2024</p>
-        </div>
-
-        <!-- +2 Degree -->
-        <div
-          class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-          <div class="flex items-center mb-4">
-            <div class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                class="bi bi-mortarboard" viewBox="0 0 16 16">
-                <path d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z" />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold">+2</h4>
-          </div>
-          <p class="text-lg"><strong>College Name:</strong> NIST</p>
-          <p class="text-lg"><strong>Graduation Year:</strong> 2019</p>
-        </div>
-
-        <!-- School -->
-        <div
-          class="education-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-          <div class="flex items-center mb-4">
-            <div class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                class="bi bi-mortarboard" viewBox="0 0 16 16">
-                <path d="M8 0l-1 1L6 1.5l-1 1.5h6L10 1.5l-1-1L8 0zM0 5l8 3 8-3v8H0V5zm8 3l5-2v2H3V6l5 2z" />
-              </svg>
-            </div>
-            <h4 class="text-xl font-semibold">School</h4>
-          </div>
-          <p class="text-lg">
-            <strong>School Name:</strong> Tripura Glorious Academy
-          </p>
-          <p class="text-lg"><strong>Graduation Year:</strong> 2018</p>
-        </div>
-      </div>
-      <div class="hr-container my-6">
-        <hr class="border-t-2 border-gray-700" />
-      </div>
-    </section>
-
-
-    <!-- Certificate Section -->
-
-    <!-- <section id="certification" class="py-16 bg-gray-800 text-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-blue-400 mb-8">Certification</h2>
-    
-            <div class="certification-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
-                            <path d="M9 12.416V8.5h2V6H7v2.5h2v3.916c-.795-.253-1.692-.416-2.5-.416s-1.705.163-2.5.416V6.5h2V4H6v4.5h2v3.916c-.795-.253-1.692-.416-2.5-.416s-1.705.163-2.5.416V9h2v2.5h-2v2H4v1h2.5v.5h5v-.5H12v-2h-2v-.5h-2v-.5h5V7.5h1V6.5H9V4z"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold">Certification Name</h4>
-                </div>
-                <p class="text-lg"><strong>Issuing Organization:</strong> Organization Name</p>
-                <p class="text-lg"><strong>Completion Date:</strong> Date</p>
-            </div>
-    
-            <div class="certification-item mb-8 bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div class="flex items-center mb-4">
-                    <div class="min-w-12 min-h-12 bg-blue-400 text-white rounded-full flex items-center justify-center mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
-                            <path d="M9 12.416V8.5h2V6H7v2.5h2v3.916c-.795-.253-1.692-.416-2.5-.416s-1.705.163-2.5.416V6.5h2V4H6v4.5h2v3.916c-.795-.253-1.692-.416-2.5-.416s-1.705.163-2.5.416V9h2v2.5h-2v2H4v1h2.5v.5h5v-.5H12v-2h-2v-.5h-2v-.5h5V7.5h1V6.5H9V4z"/>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-semibold">Certification Name</h4>
-                </div>
-                <p class="text-lg"><strong>Issuing Organization:</strong> Organization Name</p>
-                <p class="text-lg"><strong>Completion Date:</strong> Date</p>
-            </div>
-    
-        </div>
-        <div class="hr-container my-6">
-            <hr class="border-t-2 border-gray-700">
-        </div>
-    </section> -->
-
-    <!-- Contact Section  -->
-
-    <section id="contact" class="py-10 bg-gray-900">
-      <div class="container mx-auto px-6">
-        <h2 class="text-2xl font-semibold mb-6 text-white text-center">
-          Contact Me
+    <!-- About Me Section -->
+    <section id="about" class="py-8 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-blue-400 flex items-center">
+          <i class="fas fa-user mr-3"></i> About Me
         </h2>
-        <div class="contact-container flex justify-center items-center flex-wrap" style="
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-          ">
-          <div class="contact-item text-center" style="display: flex; flex-direction: column; align-items: center">
-            <span class="text-white">Email:</span>
-            <a href="mailto:karki.ni018@gmail.com" target="_blank" class="mt-2" style="
-                display: inline-block;
-                padding: 0.5rem;
-                border-radius: 50%;
-                background-color: #374151;
-                transition: background-color 0.3s ease;
-              ">
-              <img src="images/gmail.jpeg" alt="Email" width="30" height="30"
-                style="border-radius: 50%; object-fit: contain" />
-            </a>
+        <div class="bg-gray-800 p-12 rounded-xl shadow-lg">
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-2/3">
+              <p class="text-lg leading-relaxed mb-4">
+                I'm a Python developer specializing in backend development with Django and Django REST Framework. 
+                I'm passionate about building clean, maintainable code that solves real-world problems efficiently.
+                With a background in data analysis, I bring a unique perspective to software development.
+                I'm constantly learning and expanding my skillset, currently focusing on advanced Django techniques and 
+                API optimization.
+              </p>
+              
+              <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center">
+                  <i class="fas fa-map-marker-alt text-blue-400 mr-3 w-5"></i>
+                  <span>Kathmandu, Nepal</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-envelope text-blue-400 mr-3 w-5"></i>
+                  <span>karki.ni018@gmail.com</span>
+                </div>
+                <!-- <div class="flex items-center">
+                  <i class="fas fa-phone text-blue-400 mr-3 w-5"></i>
+                  <span>+977 98XXXXXXXX</span>
+                </div> -->
+                <div class="flex items-center">
+                  <i class="fas fa-globe text-blue-400 mr-3 w-5"></i>
+                  <span>English, Nepali</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="md:w-1/3">
+              <div class="bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4 text-blue-300">Professional Goals</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                    <span>Become a Django/Python expert</span>
+                  </li>
+                  <!-- <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                    <span>Master cloud deployment & DevOps</span>
+                  </li> -->
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                    <span>Build scalable web applications</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="contact-item text-center" style="display: flex; flex-direction: column; align-items: center">
-            <span class="text-white">LinkedIn:</span>
-            <a href="https://www.linkedin.com/in/nirajkarki1/" target="_blank" class="mt-2" style="
-                display: inline-block;
-                padding: 0.5rem;
-                border-radius: 50%;
-                background-color: #374151;
-                transition: background-color 0.3s ease;
-              ">
-              <img src="images/linkedin.png" alt="linkedin" width="30" height="30"
-                style="border-radius: 50%; object-fit: contain" />
-            </a>
+        </div>
+      </div>
+    </section>
+<!-- Technical Skills Section -->
+    <section id="skills" class="py-12 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-blue-400 flex items-center">
+          <i class="fas fa-code mr-3"></i> Technical Skills
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Programming Languages -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-6 text-blue-300">Programming Languages</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-blue-600 transition-colors duration-300">
+                <i class="fab fa-python text-3xl mb-2"></i>
+                <p class="font-medium">Python</p>
+              </div>
+              <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-blue-600 transition-colors duration-300">
+                <i class="fab fa-js text-3xl mb-2"></i>
+                <p class="font-medium">JavaScript</p>
+              </div>
+              <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-blue-600 transition-colors duration-300">
+                <i class="fab fa-html5 text-3xl mb-2"></i>
+                <p class="font-medium">HTML</p>
+              </div>
+              <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-blue-600 transition-colors duration-300">
+                <i class="fab fa-css3-alt text-3xl mb-2"></i>
+                <p class="font-medium">CSS</p>
+              </div>
+            </div>
           </div>
-          <div class="contact-item text-center" style="display: flex; flex-direction: column; align-items: center">
-            <span class="text-white">GitHub:</span>
-            <a href="https://github.com/Niraj-commits" target="_blank" class="mt-2" style="
-                display: inline-block;
-                padding: 0.5rem;
-                border-radius: 50%;
-                background-color: #374151;
-                transition: background-color 0.3s ease;
-              ">
-              <img src="images/github.png" alt="github" width="30" height="30"
-                style="border-radius: 50%; object-fit: contain" />
-            </a>
+          
+          <!-- Frameworks & Tools -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-6 text-blue-300">Frameworks & Tools</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-blue-600 transition-colors duration-300">
+                <i class="fas fa-layer-group text-3xl mb-2"></i>
+                <p class="font-medium">Django</p>
+              </div>
+              <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-blue-600 transition-colors duration-300">
+                <i class="fas fa-exchange-alt text-3xl mb-2"></i>
+                <p class="font-medium">Django REST</p>
+              </div>
+              <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-blue-600 transition-colors duration-300">
+                <i class="fas fa-database text-3xl mb-2"></i>
+                <p class="font-medium">MySQL</p>
+              </div>
+              <div class="bg-gray-700 rounded-lg p-4 text-center hover:bg-blue-600 transition-colors duration-300">
+                <i class="fab fa-git-alt text-3xl mb-2"></i>
+                <p class="font-medium">Git/GitHub</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Technology Stack -->
+       
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-blue-400 flex items-center">
+          <i class="fas fa-laptop-code mr-3"></i> Projects
+        </h2>
+
+        <!-- Featured Project -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-12">
+          <h3 class="text-2xl font-semibold mb-4 text-blue-300">Featured Project</h3>
+          <div class="flex flex-col lg:flex-row gap-8">
+            <div class="lg:w-1/2">
+              <img src="images/expense_tracker/kharcha.png" alt="Expense Tracker(Kharcha)"
+                class="rounded-lg object-fit w-full h-80 shadow-md" />
+            </div>
+            <div class="lg:w-1/2">
+              <div class="mb-4">
+                <h4 class="text-xl font-semibold mb-2">Expense Tracker (Kharcha)</h4>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="bg-green-700 text-xs px-2 py-1 rounded">Django</span>
+                  <span class="bg-green-700 text-xs px-2 py-1 rounded">Bootstrap</span>
+                  <span class="bg-green-700 text-xs px-2 py-1 rounded">SQLite</span>
+                </div>
+                <p class="text-gray-300 leading-relaxed">
+                  Kharcha is a personal expense tracker built with Django and SQLite. It allows users to create custom cards, log income and expenses, and filter/search through transactions. The app focuses on simplicity and clarity, helping users manage their day-to-day finances easily. 
+                </p>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <h5 class="text-lg font-medium mb-2">Key Features:</h5>
+                  <ul class="list-disc list-inside space-y-1 text-gray-300">
+                    <li>User authentication and permission system</li>
+                    <li>Advanced search and filtering capabilities</li>
+                    <li>Bootstrap for responsive and user friendly UI</li>
+                  </ul>
+                </div>
+                <div class="flex items-center space-x-4 mt-6">
+                  <a href="https://github.com/Niraj-commits/Kharcha" target="_blank"
+                    class="inline-flex items-center bg-gray-600 px-4 py-2 rounded hover:bg-blue-700 transition">
+                    <i class="fab fa-github mr-2"></i> View Code
+                  </a>
+                  <a href="https://niraj18.pythonanywhere.com" target="_blank"
+                    class="inline-flex items-center border border-blue-400 text-blue-400 px-4 py-2 rounded hover:bg-blue-400 hover:text-white transition">
+                    <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Projects Grid -->
+        <h3 class="text-2xl font-semibold mb-6 text-blue-300">Other Projects</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="relative mb-4">
+                <img src="images/easy_buy_api/Easy_buy_Api.png" alt="E-commerce API"
+                  class="rounded-lg object-fit w-full h-48" />
+                <div class="absolute top-2 right-2">
+                  <span class="bg-green-600 text-xs px-2 py-1 rounded">Django</span>
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Easy_buy_Api</h3>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">DRF</span>
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">SQLite</span>
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">drf-spectacular</span>
+              </div>
+              <p class="text-gray-300 mb-4">
+                EasyBuy-API is a RESTful backend system for an e-commerce platform, supporting roles like admin, customer, supplier, and delivery personnel. Built using Django REST Framework, it includes product management, order tracking, role-based permissions,and email based notifications
+              </p>
+            </div>
+            <div class="flex space-x-3">
+              <a href="https://github.com/Niraj-commits/EasyBuy-API" class="inline-flex items-center bg-gray-600 px-3 py-2 rounded text-sm hover:bg-blue-700 transition" target="_blank">
+                <i class="fab fa-github mr-1"></i> View Code
+              </a>
+              <a href="https://github.com/Niraj-commits/EasyBuy-API" class="inline-flex items-center border border-blue-400 text-blue-400 px-3 py-2 rounded text-sm hover:bg-blue-400 hover:text-white transition" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i> Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="relative mb-4">
+                <img src="images/library_mgmt/library_management.png" alt="Weather Dashboard"
+                  class="rounded-lg object-fit w-full h-48" />
+                <div class="absolute top-2 right-2">
+                  <span class="bg-green-600 text-xs px-2 py-1 rounded">Django</span>
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">LibraApp Api</h3>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">DRF</span>
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">SQLite</span>
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">drf-spectacular</span>
+              </div>
+              <p class="text-gray-300 mb-4">
+                LibraApp is a Django-based library management system where admins can manage books and users can issue or return books. Features include book search, availability filtering, and a role-based login system. Built with Django rest framework
+              </p>
+            </div>
+            <div class="flex space-x-3">
+              <a href="https://github.com/Niraj-commits/LibraApp" class="inline-flex items-center bg-gray-600 px-3 py-2 rounded text-sm hover:bg-blue-700 transition" target="_blank">
+                <i class="fab fa-github mr-1"></i> View Code
+              </a>
+              <a href="https://github.com/Niraj-commits/LibraApp" class="inline-flex items-center border border-blue-400 text-blue-400 px-3 py-2 rounded text-sm hover:bg-blue-400 hover:text-white transition" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i> Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="relative mb-4">
+                <img src="images/inventory_mgmt/inventory_mgmt_system.png" alt="Task Manager"
+                  class="rounded-lg object-fit w-full h-48" />
+                <div class="absolute top-2 right-2">
+                  <span class="bg-green-600 text-xs px-2 py-1 rounded">Django</span>
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Invento Api</h3>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">Django</span>
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">SQLite</span>
+                <span class="bg-gray-700 text-xs px-2 py-1 rounded">drf-spectacular</span>
+              </div>
+              <p class="text-gray-300 mb-4">
+                Invento is a Django-based inventory management system designed to help businesses manage product data efficiently. It includes product CRUD operations, and a clean admin interface for day-to-day inventory control.
+              </p>
+            </div>
+            <div class="flex space-x-3">
+              <a href="https://github.com/Niraj-commits/Invento" class="inline-flex items-center bg-gray-600 px-3 py-2 rounded text-sm hover:bg-blue-700 transition" target="_blank">
+                <i class="fab fa-github mr-1"></i> View Code
+              </a>
+              <a href="https://github.com/Niraj-commits/Invento" class="inline-flex items-center border border-blue-400 text-blue-400 px-3 py-2 rounded text-sm hover:bg-blue-400 hover:text-white transition" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- View All Projects Button -->
+        <div class="mt-10 text-center">
+          <a href="https://github.com/Niraj-commits?tab=repositories" target="_blank" class="px-6 py-3 bg-blue-800 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">
+            <i class="fas fa-code-branch mr-2"></i> View All Projects on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-12 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-blue-400 flex items-center">
+          <i class="fas fa-briefcase mr-3"></i> Professional Experience
+        </h2>
+    
+        <!-- Experience Timeline -->
+        <div class="relative">
+          <!-- Vertical Line -->
+          <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-400"></div>
+          
+          <!-- Experience Item 1 -->
+          <div class="relative mb-12">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 md:text-left">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg md:ml-auto">
+                  <h3 class="text-xl font-semibold text-blue-300">Data Analyst</h3>
+                  <p class="text-lg font-medium mt-1">Pivotech Nepal Pvt. Ltd</p>
+                  <p class="text-sm text-gray-400 mt-1">January 2024 – August 2024</p>
+                  <div class="mt-4 text-gray-300">
+                    <ul class="list-disc list-inside space-y-2">
+                      <li>Collected and processed product-related data from customers for integration into an Inventory Management System</li>
+                      <li>Analyzed and mapped customer data fields to match internal database schema</li>
+                      <li>Used MySQL to clean, reformat, and upload large datasets into the backend system</li>
+                      <li>Gained hands-on experience with relational databases and understanding of data structures used in business operations</li>
+                    </ul>
+                  </div>       
+                </div>
+              </div>
+              <div class="bg-blue-400 rounded-full w-10 h-10 flex items-center justify-center z-10">
+                <i class="fas fa-database text-white"></i>
+              </div>
+              <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+          </div>
+          
+          <!-- Experience Item 2 (add more as needed) -->
+          <!-- <div class="relative mb-12">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12"></div>
+              <div class="bg-blue-400 rounded-full w-10 h-10 flex items-center justify-center z-10">
+                <i class="fas fa-code text-white"></i>
+              </div>
+              <div class="md:w-1/2 mb-8 md:mb-0 md:pl-12">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                  <h3 class="text-xl font-semibold text-blue-300">Python Developer Intern</h3>
+                  <p class="text-lg font-medium mt-1">Tech Solutions Inc.</p>
+                  <p class="text-sm text-gray-400 mt-1">June 2023 – December 2023</p>
+                  <div class="mt-4 space-y-2 text-gray-300">
+                    <p>• Developed small-scale web applications using Django framework</p>
+                    <p>• Created RESTful APIs for client-side applications</p>
+                    <p>• Implemented database models and migrations</p>
+                    <p>• Participated in code reviews and team programming sessions</p>
+                    <p>• Assisted senior developers with debugging and testing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-12 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-blue-400 flex items-center">
+          <i class="fas fa-graduation-cap mr-3"></i> Education
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Education Card 1 -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex">
+            <div class="bg-blue-400 p-4 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-university text-white text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-blue-300">Bachelor of Computer Applications</h3>
+              <p class="text-lg font-medium mt-1">Tribhuvan University</p>
+              <p class="text-sm text-gray-400 mt-1">2019 - 2023</p>
+            </div>
+          </div>
+          
+          <!-- Education Card 2 -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg flex">
+            <div class="bg-blue-400 p-4 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-school text-white text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-blue-300">High School</h3>
+              <p class="text-lg font-medium mt-1">National College of Science and Technology</p>
+              <p class="text-sm text-gray-400 mt-1">2017 - 2019</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Certification Section -->
+    <section id="certification" class="py-12 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-blue-400 flex items-center">
+          <i class="fas fa-certificate mr-3"></i> Certifications
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Certification Card 1 -->
+          <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+            <div class="flex items-center mb-4">
+              <div>
+                <h3 class="text-xl font-semibold text-blue-300">Python with django</h3>
+                <p class="text-sm text-gray-400">Mindrisers | February 2025</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">
+              A comprehensive program covering Python basics, Django, Django Rest Framework
+              and web application development.
+            </p>
+            <div class="flex items-center">
+              <a href="https://shorturl.at/EWhpi" class="text-blue-400 hover:text-blue-300 flex items-center" target="_blank">
+                <i class="fas fa-external-link-alt mr-2"></i> View Certificate
+              </a>
+            </div>
+          </div>
+          
+          <!-- Certification Card 2 -->
+          <!-- <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+            <div class="flex items-center mb-4">
+              <img src="/api/placeholder/80/80" alt="Udemy" class="w-12 h-12 rounded-full mr-4" />
+              <div>
+                <h3 class="text-xl font-semibold text-blue-300">Django Web Development Masterclass</h3>
+                <p class="text-sm text-gray-400">Udemy | October 2023</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Complete course on Django framework covering models, views, templates, REST APIs, authentication, 
+              and deployment strategies.
+            </p>
+            <div class="flex items-center">
+              <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+                <i class="fas fa-external-link-alt mr-2"></i> View Certificate
+              </a>
+            </div>
+          </div> -->
+          
+          <!-- Add more certification cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-blue-400 flex items-center">
+          <i class="fas fa-envelope mr-3"></i> Get In Touch
+        </h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-6 text-blue-300">Send Me a Message</h3>
+            <form>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Your Name</label>
+                  <input type="text" id="name" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="John Doe"  />
+                </div>
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Your Email</label>
+                  <input type="email" id="email" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="john@example.com"  />
+                </div>
+              </div>
+              <div class="mb-6">
+                <label for="subject" class="block mb-2 text-sm font-medium text-gray-300">Subject</label>
+                <input type="text" id="subject" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Project Opportunity" />
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Your Message</label>
+                <textarea id="message" rows="4" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="I'd like to discuss a project with you..."></textarea>
+              </div>
+              <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg text-sm px-5 py-3 transition-colors">
+                Send Message
+              </button>
+            </form>
+          </div>
+          
+          <!-- Contact Information -->
+          <div>
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg mb-8">
+              <h3 class="text-xl font-semibold mb-6 text-blue-300">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="bg-blue-400 p-3 rounded-lg mr-4">
+                    <i class="fas fa-map-marker-alt text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-white">Location</h4>
+                    <p class="text-gray-300 mt-1">Kathmandu, Nepal</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-blue-400 p-3 rounded-lg mr-4">
+                    <i class="fas fa-envelope text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-white">Email</h4>
+                    <p class="text-gray-300 mt-1">karki.ni018@gmail.com</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <!-- <div class="bg-blue-400 p-3 rounded-lg mr-4">
+                    <i class="fas fa-phone text-white"></i>
+                  </div> -->
+                  <!-- <div>
+                    <h4 class="font-medium text-white">Phone</h4>
+                    <p class="text-gray-300 mt-1">+977 9864000888</p>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-semibold mb-6 text-blue-300">Connect With Me</h3>
+              <div class="flex space-x-4">
+                <a href="https://github.com/Niraj-commits" target="_blank" class="bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors">
+                  <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/nirajkarki1/" target="_blank" class="bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors">
+                  <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="mailto:karki.ni018@gmail.com" class="bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors">
+                  <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <!-- Add more social media icons as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-center py-8 border-t border-gray-700">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-2xl font-bold">
+            <span class="text-blue-400">N</span>iraj <span class="text-blue-400">K</span>arki
+          </h2>
+          <p class="text-gray-400 mt-1">Python Developer</p>
+        </div>
+        <nav class="flex space-x-6">
+          <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
+          <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
+          <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
+        </nav>
+      </div>
+      <div class="mt-6">
+        <p class="text-gray-400">&copy; 2025 Niraj Karki. All rights reserved.</p>
+      </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-center py-6">
-      <p>&copy; 2025 Niraj Karki. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  </footer>
+  <script src="app.js"></script>
 </body>
-
 </html>
