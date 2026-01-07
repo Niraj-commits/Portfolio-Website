@@ -1,0 +1,97 @@
+/* =================================================================
+   5. NAVIGATION
+   =================================================================
+*/
+nav { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    padding: 25px 0; 
+    z-index: 1000; 
+    transition: 0.4s; 
+    border-bottom: 1px solid transparent; 
+}
+
+nav.scrolled { 
+    background: rgba(2, 2, 3, 0.95); 
+    backdrop-filter: blur(15px); 
+    border-bottom: 1px solid rgba(255,255,255,0.08); 
+    padding: 15px 0; 
+}
+
+.nav-inner { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* --- LOGO STYLES --- */
+.logo { 
+    font-size: 1.6rem; 
+    font-weight: 700; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    text-decoration: none; /* Removes underline from Logo */
+    color: var(--text-main); /* Ensures logo is white, not default blue link color */
+}
+
+.logo span { 
+    color: var(--accent); 
+}
+
+/* --- NAVIGATION MENU (The Fix) --- */
+.nav-links { 
+    display: flex; 
+    gap: 40px; 
+    
+    /* REMOVES THE DOTS */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Ensure individual list items have no dots either */
+.nav-links li {
+    list-style: none;
+}
+
+/* --- LINK STYLES --- */
+.nav-links a { 
+    color: var(--text-muted); 
+    font-size: 0.8rem; 
+    font-weight: 500; 
+    position: relative; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    
+    /* REMOVES THE TEXT UNDERLINE */
+    text-decoration: none; 
+}
+
+.nav-links a:hover { 
+    color: #fff; 
+}
+
+/* This creates the animated underline effect on hover */
+.nav-links a::after { 
+    content: ''; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 0; 
+    width: 0; 
+    height: 1px; 
+    background: var(--accent); 
+    transition: 0.3s; 
+}
+
+.nav-links a:hover::after { 
+    width: 100%; 
+}
+
+.hamburger { 
+    display: none; 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    color: #fff; 
+}

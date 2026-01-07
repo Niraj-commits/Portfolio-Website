@@ -1,0 +1,75 @@
+
+
+/* =================================================================
+   MASTER ANIMATIONS
+   =================================================================
+*/
+
+/* 1. STANDARD REVEAL (Fade Up) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. SIDE REVEAL (Fade In from Left) */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 3. DELAYS */
+.delay-200 { transition-delay: 0.2s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-600 { transition-delay: 0.6s; }
+
+/* --- PASTE THIS INTO style.css --- */
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    
+    /* This was missing! It hides the box until you click an image */
+    display: none; 
+    
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+/* This class is added by JS when you click an image */
+#lightbox.active {
+    display: flex;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10001;
+}

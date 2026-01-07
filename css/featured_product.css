@@ -1,0 +1,194 @@
+
+/* =================================================================
+   9. FEATURED WORK (HOLOGRAPHIC SCANNER)
+   =================================================================
+*/
+#featured { padding: 50px 0; }
+
+.project-showcase {
+    background: linear-gradient(145deg, #0a0a0c, #050505);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Image gets slightly more space */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+/* Hover: Glows slightly */
+.project-showcase:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 30px 60px rgba(99, 102, 241, 0.1);
+}
+
+/* --- THE VISUAL (SCANNER) --- */
+.project-visual {
+    position: relative;
+    min-height: 500px;
+    background: #000;
+    overflow: hidden;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.project-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: 0.5s transform;
+    /* Grayscale filter that removes on hover */
+    filter: grayscale(60%) contrast(1.1);
+}
+
+.project-showcase:hover .project-visual img {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* 1. CRT Scanlines (Static Texture) */
+.scan-overlay {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 2px,
+        rgba(0, 0, 0, 0.3) 3px
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 2. The Moving Laser Beam */
+.scan-beam {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: var(--accent); /* Cyan laser */
+    box-shadow: 0 0 15px var(--accent), 0 0 30px var(--accent);
+    z-index: 3;
+    animation: scanning 4s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+@keyframes scanning {
+    0% { top: 0%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+/* Decorative Corners */
+.corner-bracket {
+    position: absolute; width: 30px; height: 30px;
+    border: 2px solid var(--accent);
+    z-index: 4; transition: 0.3s;
+}
+.tl { top: 20px; left: 20px; border-bottom: 0; border-right: 0; }
+.br { bottom: 20px; right: 20px; border-top: 0; border-left: 0; }
+
+.project-showcase:hover .corner-bracket {
+    width: 50px; height: 50px;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+
+/* --- THE DATA (CONTENT) --- */
+.project-info {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Meta Data Header */
+.meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+
+.meta-tag {
+    color: var(--success); /* Green */
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.meta-tag i { margin-right: 5px; animation: blink 2s infinite; }
+
+.meta-id {
+    color: var(--text-muted);
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+/* The "Hollow" Title Effect */
+.project-title {
+    font-size: 4rem;
+    line-height: 0.9;
+    margin-bottom: 25px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5); /* Outline text */
+    transition: 0.4s;
+    cursor: default;
+}
+
+.project-showcase:hover .project-title {
+    color: #fff; /* Fills in on hover */
+    -webkit-text-stroke: 0px transparent;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.project-desc {
+    color: #ccc;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Tech Stack Pills */
+.tech-stack-row {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px;
+}
+
+.stack-badge {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: 0.3s;
+    display: flex; align-items: center; gap: 8px;
+}
+
+.stack-badge:hover {
+    border-color: var(--primary);
+    color: #fff;
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.action-buttons {
+    display: flex; gap: 20px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .project-showcase {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px auto;
+    }
+    .project-visual { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .project-title { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .project-info { padding: 40px 25px; }
+    .project-title { font-size: 2.5rem; }
+}

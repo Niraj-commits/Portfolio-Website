@@ -1,0 +1,103 @@
+
+/* =================================================================
+   PROJECTS CAROUSEL (BOUNCE: LEFT <-> RIGHT)
+   =================================================================
+*/
+#projects { 
+    padding: 0; 
+}
+
+/* Container */
+.carousel-view {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+    padding: 40px 0;
+    /* Soft fade on edges */
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+/* The Track */
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    width: max-content; /* Fit content exactly */
+    
+    /* ANIMATION: 30s duration, infinite loop, ALTERNATE direction */
+    animation: scroll-bounce 30s linear infinite alternate;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* --- CARD STYLING --- */
+.carousel-card {
+    width: 380px; /* Fixed width */
+    flex-shrink: 0;
+    
+    background: #0a0a0c;
+    border: 1px solid #222;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 420px; 
+}
+
+.carousel-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+/* --- THE BOUNCE ANIMATION --- */
+@keyframes scroll-bounce {
+    /* Start at 0 (First Item visible) */
+    0% { transform: translateX(0); }
+    
+    /* Scroll until the right end touches the screen edge */
+    /* Math: Viewport Width (100vw) minus Track Width (100%) */
+    100% { transform: translateX(calc(100vw - 100%)); } 
+}
+
+/* --- CARD INTERNALS --- */
+.p-img-wrapper {
+    width: 100%; height: 180px; background: #000; position: relative;
+    cursor: pointer; border-bottom: 1px solid #1a1a1a; flex-shrink: 0;
+}
+.p-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.carousel-card:hover .p-img-wrapper img { transform: scale(1.05); }
+
+.p-img-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); display: flex;
+    align-items: center; justify-content: center;
+    opacity: 0; transition: 0.3s;
+}
+.p-img-overlay i { color: #fff; font-size: 1.5rem; transform: scale(0); transition: 0.3s; }
+.p-img-wrapper:hover .p-img-overlay { opacity: 1; }
+.p-img-wrapper:hover .p-img-overlay i { transform: scale(1); }
+
+.p-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+.p-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.p-title { font-size: 1.25rem; margin: 0; color: #fff; line-height: 1.2; }
+.p-icon { font-size: 1.4rem; color: var(--primary); }
+.p-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 15px; flex-grow: 1; }
+.p-footer { margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
+.p-tag { background: rgba(255,255,255,0.05); padding: 4px 10px; font-size: 0.75rem; color: #ccc; border-radius: 4px; border: 1px solid rgba(255,255,255,0.1); }
+.p-actions-row { display: flex; gap: 10px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: auto; }
+.btn-sm { flex: 1; padding: 10px 0; font-size: 0.85rem; border-radius: 8px; text-align: center; }
+.view-more-container { text-align: center; margin-top: 40px; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .carousel-card { width: 300px; }
+}
+@media (max-width: 768px) {
+    .carousel-card { width: 280px; min-height: 400px; }
+}

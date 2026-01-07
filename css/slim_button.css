@@ -1,0 +1,22 @@
+/* =================================================================
+   4. COMPONENT LIBRARY (SLIM BUTTONS)
+   =================================================================
+*/
+.btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px; padding: 10px 24px; border-radius: 50px; /* SLIM PADDING */
+    font-weight: 500; cursor: pointer; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    font-size: 0.9rem; letter-spacing: 0.5px; line-height: 1.2;
+}
+.btn-primary { background: #fff; color: #000; border: 1px solid #fff; }
+.btn-primary:hover { background: transparent; color: #fff; box-shadow: 0 0 30px rgba(255,255,255,0.2); transform: translateY(-2px); }
+.btn-download { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; border: 1px solid transparent; position: relative; overflow: hidden; }
+.btn-download::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: 0.5s; }
+.btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -5px var(--primary-glow); }
+.btn-download:hover::before { left: 100%; }
+.btn-glass { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+.btn-glass:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+.fw-actions .btn { padding: 10px 20px; font-size: 0.85rem; }
+
+.tech-pill { display: inline-block; padding: 6px 14px; background: #1a1a1d; border: 1px solid #333; border-radius: 6px; font-size: 0.8rem; color: #ccc; font-family: monospace; transition: 0.3s; }
+.tech-pill:hover { border-color: var(--accent); color: #fff; transform: translateY(-2px); }

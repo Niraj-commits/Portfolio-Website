@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niraj Karki | Portfolio</title>
+    
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/education.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/featured_product.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/hobbies.css">
+    <link rel="stylesheet" href="css/miscellaneous.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/project_carousel.css">
+    <link rel="stylesheet" href="css/responsive_media_queries.css">
+    <link rel="stylesheet" href="css/slim_button.css">
+    <link rel="stylesheet" href="css/tech_stack.css">
+    </head>
+<body>
+    <canvas id="canvas-bg"></canvas>
+
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#hero" class="logo">Niraj<span> Karki</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#stack">Tech</a></li> 
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#connect">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div id="hero-slot"></div>
+    <div id="about-slot"></div>
+    <div id="tech-slot"></div>
+    <div id="featured-slot"></div>
+    <div id="projects-slot"></div>
+    <div id="experience-slot"></div>
+    <div id="education-slot"></div>
+    <div id="hobbies-slot"></div>
+    <div id="contact-slot"></div>
+
+<footer id="footer">
+        <div class="container footer-inner">
+            
+            <div class="footer-left">
+                <a href="#" class="footer-logo">Niraj<span> Karki</span></a>
+                <p class="copyright">© 2025 // ALL SYSTEMS NOMINAL</p>
+            </div>
+
+            <div class="footer-right">
+                <div class="server-status">
+                    <span class="status-dot"></span>
+                    SERVER: ONLINE
+                </div>
+                <a href="#hero" class="scroll-top-btn">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <div id="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">×</span>
+        <img id="lightbox-img" src="" alt="Zoomed Project">
+    </div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+
+/* =================================================================
+   EXPERIENCE SECTION (HOLOGRAPHIC DATA STREAM)
+   =================================================================
+*/
+#experience {
+    padding: 50px 0;
+    overflow: hidden; /* Prevents horizontal scrollbars from entrance anim */
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 40px;
+    perspective: 1000px; /* Needed for 3D tilt effect */
+}
+
+/* --- THE GLOWING LINE --- */
+.timeline-line {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 3px;
+    height: 100%;
+    /* Glowing gradient line */
+    background: linear-gradient(to bottom, var(--accent), var(--primary), transparent);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    border-radius: 3px;
+}
+
+.tl-item {
+    position: relative;
+    margin-bottom: 60px;
+    /* Ensure the connector beam is visible */
+    display: flex;
+    align-items: center;
+}
+
+.tl-item:last-child { margin-bottom: 0; }
+
+
+/* --- THE NEON DOTS --- */
+.tl-dot {
+    position: absolute;
+    left: -44px; /* Centered on the new line width */
+    top: 25px;
+    width: 16px;
+    height: 16px;
+    background: #000;
+    border: 3px solid var(--accent); /* Cyan border */
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--accent), inset 0 0 10px var(--accent);
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+/* Hovering the card makes the dot erupt with light */
+.tl-item:hover .tl-dot {
+    background: var(--accent);
+    box-shadow: 0 0 30px var(--accent), 0 0 60px var(--accent);
+    transform: scale(1.2);
+}
+
+/* "Current Role" Permanent Pulse */
+.current-role .tl-dot {
+    animation: neon-pulse 2s infinite;
+}
+
+
+/* --- THE HOLOGRAPHIC CARD --- */
+.tl-content {
+    position: relative;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    /* Glassmorphism blur */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+    transform-style: preserve-3d; /* For 3D child elements if added later */
+}
+
+/* THE ENERGY BEAM CONNECTOR (Surprise Element 1) */
+.tl-content::before {
+    content: '';
+    position: absolute;
+    left: -40px; /* Connects to the line area */
+    top: 32px;
+    width: 40px;
+    height: 2px;
+    /* A glowing horizontal beam */
+    background: linear-gradient(to right, var(--accent), rgba(255,255,255,0.1));
+    box-shadow: 0 0 10px var(--accent);
+    opacity: 0.6;
+    transition: 0.4s;
+}
+
+/* HOVER EFFECT: 3D TILT & GLOW (Surprise Element 2) */
+.tl-item:hover .tl-content {
+    border-color: var(--accent);
+    /* 3D Tilt + Lift */
+    transform: translateY(-5px) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 
+        20px 20px 60px rgba(0,0,0,0.5), /* Deep shadow for depth */
+        0 0 30px rgba(6, 182, 212, 0.2); /* Cyan outer glow */
+}
+
+.tl-item:hover .tl-content::before {
+    opacity: 1;
+    box-shadow: 0 0 20px var(--accent);
+    height: 3px; /* Beam gets thicker */
+}
+
+
+/* --- TYPOGRAPHY & DETAILS --- */
+.tl-date {
+    display: inline-block;
+    font-family: 'General Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Glowing text effect */
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+.tl-role {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.tl-org {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tl-desc {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* --- ANIMATIONS --- */
+
+/* Pulse for the current role dot */
+@keyframes neon-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+}
+
+/* SIDE ENTRANCE ANIMATION (Surprise Element 3) */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px); /* Start from the left */
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* --- MOBILE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .timeline { padding-left: 30px; }
+    .tl-dot { left: -35px; width: 12px; height: 12px; top: 20px; }
+    .tl-content::before { left: -30px; width: 30px; top: 25px; }
+    .tl-role { font-size: 1.3rem; }
+}

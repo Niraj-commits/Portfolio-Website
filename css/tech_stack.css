@@ -1,0 +1,16 @@
+/* =================================================================
+   7. TECH STACK (NEW)
+   =================================================================
+*/
+#stack { padding: 60px 0; background: rgba(0,0,0,0.5); overflow: hidden; position: relative; }
+.marquee-wrapper { width: 100%; overflow: hidden; white-space: nowrap; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+.marquee-content { display: inline-flex; gap: 40px; animation: scroll 30s linear infinite; }
+.tech-item {
+    background: #0a0a0c; border: 1px solid #222; padding: 15px 30px;
+    border-radius: 50px; font-size: 1.2rem; color: #aaa;
+    display: flex; align-items: center; gap: 10px; font-weight: 500;
+    transition: 0.3s;
+}
+.tech-item:hover { border-color: var(--primary); color: #fff; box-shadow: 0 0 15px rgba(99, 102, 241, 0.2); }
+.tech-item i { color: var(--primary); }
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }

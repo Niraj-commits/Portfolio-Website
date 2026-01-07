@@ -1,0 +1,29 @@
+
+/* =================================================================
+   15. RESPONSIVE MEDIA QUERIES
+   =================================================================
+*/
+@media (max-width: 1024px) {
+    .hero-grid, .about-layout, .featured-wrapper, .edu-cert-wrapper, .connect-layout { grid-template-columns: 1fr; }
+    .hero-title { font-size: 3.5rem; }
+    .profile-img-container { margin: 0 auto; width: 320px; height: 320px; }
+    .fw-visual { min-height: 350px; border-right: none; border-bottom: 1px solid #1a1a1a; }
+    .about-layout { gap: 50px; }
+}
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .section-title { font-size: 2.5rem; }
+    .timeline::before { left: 20px; }
+    .tl-item { width: 100%; padding-left: 60px; padding-right: 0; text-align: left; }
+    .tl-item:nth-child(odd), .tl-item:nth-child(even) { left: 0; text-align: left; }
+    .tl-item:nth-child(odd) .tl-dot, .tl-item:nth-child(even) .tl-dot { left: 11px; right: auto; }
+    .tl-content::after { left: -10px !important; border-width: 10px 10px 10px 0 !important; border-color: transparent #222 transparent transparent !important; }
+    .about-grid-wrapper { gap: 15px; }
+    .stat-card { padding: 30px 10px; min-height: 150px; }
+    .stat-val { font-size: 2.5rem; }
+    .stat-title { font-size: 1.5rem; }
+    .hero-title { font-size: 3rem; }
+    .marquee-content { gap: 20px; }
+    .tech-item { font-size: 1rem; padding: 10px 20px; }
+}

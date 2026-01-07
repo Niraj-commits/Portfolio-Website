@@ -1,0 +1,156 @@
+/* =================================================================
+   1. ROOT VARIABLES & DESIGN TOKENS
+   =================================================================
+*/
+:root {
+    --bg-void: #020203;       
+    --bg-surface: #0a0a0c;    
+    --bg-elevated: #121215;   
+    --primary: #6366f1;       
+    --primary-glow: rgba(99, 102, 241, 0.4);
+    --secondary: #a855f7;     
+    --accent: #06b6d4;        
+    --success: #10b981;       
+    --font-head: 'Clash Display', sans-serif;
+    --font-body: 'General Sans', sans-serif;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --text-dark: #000000;
+    --container-w: 1250px;
+    --section-spacing: 120px;
+}
+/* =================================================================
+   1. BACKGROUND & GLOBAL RESET
+   =================================================================
+*/
+/* FIX: This forces the canvas to sit BEHIND everything */
+#canvas-bg {
+    position: fixed; /* Locks it to the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Puts it behind everything */
+    background: #000000; /* Pure black base */
+    pointer-events: none; /* Lets you click items on top of it */
+}
+
+*, *::before, *::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    scroll-behavior: smooth; 
+    font-size: 16px; 
+    background-color: #000000;
+    overscroll-behavior: none; 
+}
+
+body { 
+    /* background: #000000; DUPLICATE: Already defined in html and #canvas-bg */
+    color: var(--text-main); 
+    font-family: var(--font-body); 
+    line-height: 1.6; 
+    overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased; 
+    position: relative; 
+    /* margin: 0; DUPLICATE: Already defined in global reset (*) above */
+    /* padding: 0; DUPLICATE: Already defined in global reset (*) above */
+}
+
+/* =================================================================
+   2. UTILITY CLASSES (TIGHTER SPACING)
+   =================================================================
+*/
+.container { 
+    max-width: var(--container-w); 
+    margin: 0 auto; 
+    padding: 0 25px; 
+    position: relative; 
+    z-index: 2; 
+}
+
+/* COMPACT SEPARATOR: Reduced from 80px to 20px */
+.separator-container { 
+    padding: 20px 0; 
+    position: relative; 
+    z-index: 2; 
+}
+
+.section-divider { 
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(6, 182, 212, 0.5), rgba(168, 85, 247, 0.5), rgba(0, 0, 0, 0)); 
+    margin: 0; 
+    opacity: 0.8; 
+    width: 100%; 
+    display: block; 
+}
+
+.section-header { 
+    margin-bottom: 30px; /* Reduced from 70px */
+}
+
+/* =================================================================
+   4. SECTION SPACING (MASSIVE REDUCTION)
+   =================================================================
+*/
+
+/* Copy-paste this block to overwrite current section paddings */
+
+#about { padding: 30px 0; }
+#stack { padding: 30px 0; background: rgba(0,0,0,0.5); }
+#featured { padding: 30px 0; }
+#projects { padding: 0; } /* Projects handles its own internal padding */
+#experience { padding: 30px 0; }
+#education { padding: 30px 0; }
+#hobbies { padding: 30px 0; }
+#connect { padding: 30px 0; }
+
+/* Tighter Carousel Padding */
+.carousel-view {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+    padding: 20px 0; /* Reduced from 40px */
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+/* Removes underline from ALL links on the website */
+a {
+    text-decoration: none;
+    color: inherit; /* Ensures links use your defined text colors instead of default blue */
+}
+
+/* Optional: If you still see underlines on specific items, use these specific rules: */
+
+/* 1. For the Logo (Top Left) */
+.logo {
+    text-decoration: none;
+}
+
+/* 2. For the Navigation Menu (Top Right) */
+.nav-links a {
+    text-decoration: none;
+}
+
+/* This targets "About Me", "Technologies", "Featured Work", etc. */
+.section-title {
+    font-size: 3.5rem;  /* Increased from default */
+    font-weight: 700;   /* Make it bolder */
+    line-height: 1.1;
+    margin-top: 10px;   /* Adds a little breathing room from the tag above it */
+    
+    /* Optional: Adds a subtle glow to make it pop against the black */
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.1); 
+}
+
+/* If that is TOO big for mobile, use this media query to shrink it on phones */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
